@@ -1,0 +1,372 @@
+/* Globel CSS */
+body {
+  font-family: Arial, sans-serif !important; 
+  font-size: 16px;
+}
+h6{
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 5px !important;
+}
+p{
+  line-height: 30px;
+  /* font-size: 16px !important; */
+}
+@media screen and (max-width:1279px) {
+  p{
+    font-size: 14px !important;
+  }
+}
+
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none !important;
+}
+.main_page{
+  padding-top: 135px;
+}
+/* Globel CSS */
+
+/* Header CSS */
+.sub_Header a Span{
+  gap:8px;
+  grid-gap: 8px;
+}
+.sub_Header > a:hover, .sub_Header > button:hover, .sub_Header .active{
+  background-color: #ffaa00;
+  transition: all .2s;
+}
+/* Header CSS */
+
+/* .home-tabs-section .home-tab:hover{
+  background-color: #ffaa00 !important;
+  transition: all .2s;
+} */
+.dob_field input{
+  background-color: #f2f2f2;
+  height: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .bg{
+   background: url('./assets/bajiviadmin.jpeg');
+   background-repeat: no-repeat;
+   background-size: cover;
+  }
+  .sidebar {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    margin-left: calc(50% - 300px);
+  }
+}
+.hide-scroll{
+  ::-webkit-scrollbar{
+    display: none;
+  }
+}
+.invert-white {
+  filter: invert(100%);
+}
+
+
+
+.sub_Header a span{
+  display: flex;
+  align-items: center;
+}
+.sub_Header a span svg{
+  margin-right: 5px;
+
+}
+.home-tabs-section.all-tabs .active{
+  border: 2px solid #ffaa00;
+}
+.home-tab.chakra-tabs__tab{
+  font-weight: 700;
+}
+.home-tab.chakra-tabs__tab[aria-selected=true],
+.home-tabs-section button[aria-selected=true]{
+  border: 2px solid #ffaa00;
+  color: #000;
+  border-radius: 5px;
+}
+
+/* Mobile Menu */
+.sub_Header_mobile a span{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.sub_Header_mobile a.active{
+  font-weight: 700;
+}
+.sub_Header_mobile a.active svg{
+  background-color: #ffaa00 !important;
+}
+/* Mobile Menu */
+/* Footer Mobile Menu */
+.footer-tab-wrapper ul li a p{
+  font-size: 14px !important;
+  line-height: normal;
+}
+.footer-tab-wrapper ul li a svg path{
+  fill: none;
+  stroke: #000;
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+.footer-tab-wrapper ul li a.active svg path,
+.footer-tab-wrapper ul li a.active p{
+  fill:#000;
+  font-weight: 700;
+}
+/* Footer Mobile Menu */
+
+
+/* INbox Bell */
+.indox_Icon_wr {
+  position: relative;
+}
+
+.indox_Icon_wr::before {
+    content: "";
+    display: block;
+    opacity: 1;
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: #ec1c2b;
+}
+/* INbox Bell */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+.level_wrap .prgoress_star{
+  display: block;
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #d9dee4;
+  background-color: #f2f2f2;
+  top: -3px;
+}
+.infoPayment_sideBar .infoTabs button > a.active-menu p{
+  color: #ffaa00 !important;
+}
+
+/* All Pages Tabs like: Sport, Casino */
+.all_pages_tabsWr button[aria-selected=true]{
+  border-color: #ffaa00 !important;
+}
+
+
+/* 1280 */
+@media screen and (max-width:1279px){
+  .whteBg_xl{
+    background-color: #f2f2f2 !important;
+  }
+  input.whteBg_xl{
+    border-radius: 25px !important;
+  }
+  .main_page{
+    padding-top: 55px !important;
+  }
+  .main_page .home-tabs-section .home-tab{
+      background-color: transparent !important;
+  }
+  .main_page .home-tabs-section .home-tab svg,
+  .main_page .home-tabs-section .home-tab img{
+      padding: 13px;
+      height: 55px;
+      width: 55px !important;
+      background-color: #f2f2f2;
+      border-radius: 8px;
+  }
+  .main_page .home-tabs-section .home-tab img{
+    height: auto;
+    width: 55px;
+    padding: 13px;
+  }
+  .main_page .home-tabs-section .home-tab a{
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .news-announcement{
+    margin: 5px 10px 10px;
+    border-radius: 25px;
+  }
+  .news-announcement marquee{
+   padding: 3px 0 !important;
+   line-height: 30px !important;
+   font-size: 12.5px !important;
+  }
+  .news-announcement marquee .news-text{
+   line-height: 30px !important;
+   font-size: 12.5px !important;
+  }
+  .infoPayment_sideBar .infoTabs button{
+    background-color: #f2f2f2;
+  }
+  .infoPayment_sideBar .infoTabs button > a{
+    flex-direction: column;
+    padding: 10px 6px 6px !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-radius: 5px !important;
+    gap: 2px !important;
+  }
+  .home-tab.chakra-tabs__tab[aria-selected=true],
+  .mainTabs_header button[aria-selected=true] .home-tab{
+    border: 2px solid #ffaa00;
+    color: #000;
+    background-color:#ffaa00 !important ;
+  }
+  .mainTabs_wr {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .mainTabs_wr button.chakra-tabs__tab[aria-selected=true]{
+    background-color: #ffaa00;
+  }
+  .mainTabs_wr button{
+      width: 100%;
+      border:0;
+      border-radius: 10px;
+  }
+  .vip_page_wrap .mobileCards button{
+    font-weight: 700;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    color: #000;
+  }
+  .vip_page_wrap .mobileCards button[aria-selected=true]{
+    border: 1px solid #ffaa00;
+    background-color: #ffffff !important;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .vip_page_wrap .mobileCards .tabs_list_wr{
+    flex-wrap: wrap;
+  }
+  .vip_page_wrap .mobileCards button{
+    width: calc(33.33333% - 7px)!important;
+    min-width: unset;
+  }
+}
+
+
+
+.back-button {
+  margin-top: 7%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: "white";
+  background-color: white;
+  padding: 10px;
+}
+
+.iframe-page {
+  width: 100%;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url("../../assets/images/main/bg-dashboard.webp");
+  /* background-color: blue; */
+  position:fixed;
+  z-index: 100;
+}
+
+.iframe-container {
+  width: 100%;
+  margin: auto;
+  flex-grow: 1; /* Allow the iframe container to take up remaining space */
+  overflow: hidden; /* Hide any overflow content */
+  
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  /* padding: 10px; */
+  background: #000;
+  z-index: 1;
+}
+.cross{
+  display: flex;
+  justify-content:flex-end ;
+  cursor: pointer;
+  position: absolute;
+  padding: 10px;
+  right: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .cross {
+    display: none;
+}
+}
+@media screen and (max-width: 1024px) {
+  .iframe-container {
+    width: 100%;
+    margin: auto;
+    margin-top: 0px;
+    border-radius: 0px;
+    flex-grow: 1; /* Allow the iframe container to take up remaining space */
+    overflow: hidden; /* Hide any overflow content */
+    margin-bottom: 0px;
+  }
+
+  .iframe {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    /* background: #000; */
+  }
+
+  
+}
+
+
+.loaderbox {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #000000;
+}
+
+
+/* From Uiverse.io by JesusRafaelNavaCruz */ 
+.loaderCircular {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border-top: 8px solid #fff;
+  border-left: 8px solid #fff;
+  border-right: 8px solid #ff00;
+  animation: loader .7s infinite linear;
+}
+
+@keyframes loader {
+  to {
+    transform: rotate(360deg);
+  }
+}

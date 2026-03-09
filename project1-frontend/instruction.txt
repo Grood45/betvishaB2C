@@ -1,0 +1,142 @@
+Here's a step-by-step guide on how to use the APIs for login, logout, deposit, and withdraw operations.
+
+### **Step 1: Query the Active Domain**
+Before you can use any other API, you must first query the active domain.
+
+#### **API: /queryDomain**
+```bash
+curl -L -X POST 'https://apiinfo.cckk77.net/api/apiWallet/WICKETSPRO/queryDomain' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'cert=YOUR_CERT'
+```
+**Response:**
+```json
+{
+  "status": "1",
+  "privateDomains": [
+    {"domain": "cckk77.net", "priority": 1},
+    {"domain": "cckk77.live", "priority": 2}
+  ],
+  "domains": [
+    {"domain": "ppkk77.net", "priority": 1},
+    {"domain": "ppkk77.live", "priority": 2}
+  ]
+}
+```
+**Use the domain with the highest priority (1) from the `domains` list for the following API calls.**
+
+---
+
+### **Step 2: Get Key & Create a New Account**
+This step is required for both login and account creation.
+
+#### **API: /getKey**
+```bash
+curl -L -X POST 'https://apiinfo.ppkk77.net/api/apiWallet/WICKETSPRO/getKey' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'cert=YOUR_CERT&userId=examplepl01&userName=examplepl01&agent=examplema01&currency=2'
+```
+**Response:**
+```json
+{
+  "status": "1",
+  "key": "YOUR_GENERATED_KEY"
+}
+```
+**Save the `key` as it will be used in the login step.**
+
+---
+
+### **Step 3: Login**
+You can use the key obtained in the previous step to log in the user.
+
+#### **API: /login**
+You can choose between a POST or GET method.
+
+##### **Option 1: POST Method**
+```bash
+curl -X POST 'https://test81.ppkk77.net/apiWallet/player/WICKETSPRO/login' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'userId=examplepl01&key=YOUR_GENERATED_KEY'
+```
+##### **Option 2: GET Method**
+```bash
+https://test81.ppkk77.net/apiWallet/player/WICKETSPRO/login?userId=examplepl01&key=YOUR_GENERATED_KEY
+```
+**Response:** The response will redirect you to the player page after verification.
+
+---
+
+### **Step 4: Deposit**
+To deposit funds into the user's account.
+
+#### **API: /deposit**
+```bash
+curl -X POST 'https://apiinfo.ppkk77.net/api/apiWallet/WICKETSPRO/deposit' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'cert=YOUR_CERT&userId=examplepl01&balance=3.00&tsCode=UNIQUE_TRANSACTION_CODE'
+```
+**Response:**
+```json
+{"status":"1"}
+```
+
+---
+
+### **Step 5: Withdraw**
+To withdraw funds from the user's account.
+
+#### **API: /withdraw**
+```bash
+curl -X POST 'https://apiinfo.ppkk77.net/api/apiWallet/WICKETSPRO/withdraw' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'cert=YOUR_CERT&userId=examplepl01&balance=3.00&tsCode=UNIQUE_TRANSACTION_CODE'
+```
+**Response:**
+```json
+{"status":"1"}
+```
+
+---
+
+### **Step 6: Check Transfer Record**
+After a deposit or withdrawal, check the transfer record to confirm if the operation was successful.
+
+#### **API: /checkTransferRecord**
+```bash
+curl -X POST 'https://apiinfo.ppkk77.net/api/apiWallet/WICKETSPRO/checkTransferRecord' \
+-H 'Content-Type: application/x-www-form-urlencoded' \
+-d 'cert=YOUR_CERT&tsCodes=[{"userId":"examplepl01", "tsCode":"UNIQUE_TRANSACTION_CODE"}]'
+```
+**Response:**
+```json
+{
+    "result": {
+        "UNIQUE_TRANSACTION_CODE": {
+            "balance": 3.000000,
+            "createdate": "2023-10-11 15:20:27",
+            "tsCode": "UNIQUE_TRANSACTION_CODE",
+            "userId": "examplepl01",
+            "status": "1012"
+        }
+    },
+    "status": "1"
+}
+```
+
+---
+
+### **Step 7: Logout**
+Typically, you can manage the logout on the frontend by clearing the session or token. There may not be a dedicated logout API, but the session would naturally expire or can be invalidated by the backend based on your setup.
+
+---
+
+### **Summary:**
+1. **Query Domain:** Get the active domain to use for subsequent API calls.
+2. **Get Key:** Create a new account and get a key for login.
+3. **Login:** Use the key to log in the user.
+4. **Deposit/Withdraw:** Perform deposit or withdraw operations.
+5. **Check Transfer Record:** Verify if deposit or withdraw operations were successful.
+6. **Logout:** Clear the session/token to log out the user.
+
+Use these steps to integrate with the API for user account management, including login, logout, deposit, and withdraw operations.

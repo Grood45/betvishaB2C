@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Montserrat:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.premium-number {
+    font-family: 'Montserrat', sans-serif;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0.5px 0 0 currentColor, -0.5px 0 0 currentColor;
+}
+
+.premium-currency {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.sign-bg {
+    background: url(./assets/admin.jpeg);
+    background-size: cover;
+    height: 100vh, 100wh;
+    background-repeat: no-repeat;
+}

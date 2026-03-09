@@ -1,0 +1,42 @@
+# Environment Variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build outputs
+/project1-frontend/dist/
+/project1-frontend/build/
+/project1-admin/dist/
+/project1-admin/build/
+
+# IDE and OS files
+.DS_Store
+.vscode/
+.idea/
+
+# Local backups and DB dumps
+mongodb_backups/
+temp_dump/
+dump/
+*.bson
+*.json.gz
+
+# Other sensitive/local only data
+keys/
+*.pem
+*.log
+COMPREHENSIVE_WORK_ADMIN_PLAN.txt
+AWS_DEPLOYMENT_GUIDE.md
+CASINO_INTEGRATION_GUIDE.txt
+MONGODB_MIGRATION_GUIDE.md
+SPORTS_INTEGRATION_GUIDE.txt
+
+# Databases
+Database/

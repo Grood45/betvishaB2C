@@ -1,0 +1,1266 @@
+[
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d280"
+        },
+        "gpId": 10000,
+        "gpName": "Games Lobby",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Games 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "status": false,
+        "priority": 2,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d281"
+        },
+        "gpId": 10000,
+        "gpName": "Casino Lobby",
+        "gameId": 1,
+        "gameName": "Lobby",
+        "gameNameChinese": "Casino 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "status": false,
+        "priority": 103,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c3648d"
+        },
+        "gpId": 39,
+        "gpName": "RedTiger",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "RedTiger 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "priority": 24,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c3648e"
+        },
+        "gpId": 46,
+        "gpName": "Sv388Cockfighting",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Sv388Cockfighting 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "priority": 25,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FSV%20388.png1718993987593?alt=media&token=80257a40-3e16-4800-bdab-98ff1e0854c3"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c3648f"
+        },
+        "gpId": 47,
+        "gpName": "GiocoPlus",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "GiocoPlus 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "priority": 26,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FD37_logo.png1718989887507?alt=media&token=248975a5-54d2-4d3b-b120-74f6f2712ed1"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c36490"
+        },
+        "gpId": 1000,
+        "gpName": "ArcadiaGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "ArcadiaGaming 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 27,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FARCADIA%20GAMING.png1718994024335?alt=media&token=c80c182e-06e7-4dc9-95fe-83895c198e48"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c36491"
+        },
+        "gpId": 1009,
+        "gpName": "MPoker",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "泰富豪棋牌 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 28,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://i.ibb.co/ZGJP8sB/D37-logo.png"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c36492"
+        },
+        "gpId": 1010,
+        "gpName": "YGR",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "YGR 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 29,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FYGR.png1718994083751?alt=media&token=a58ba8c1-1568-470c-999e-b0174f1f0853"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c36493"
+        },
+        "gpId": 1012,
+        "gpName": "TCGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "TCGaming 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 30,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FTC%20GAIMING.png1718994104526?alt=media&token=1c70cb7d-a213-4f9f-8454-719f22200832"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c36494"
+        },
+        "gpId": 1016,
+        "gpName": "AFBGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "AFBGaming 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 31,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FAFB%20GAMING.png1718994186679?alt=media&token=98578959-1d2b-4768-828b-643b611b66df"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c36495"
+        },
+        "gpId": 1019,
+        "gpName": "YeeBet",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "YeeBet 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 132,
+        "status": false,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FA11_logo.png1718996345305?alt=media&token=92e97305-172e-423c-aebf-413303a180a4"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c36496"
+        },
+        "gpId": 1020,
+        "gpName": "JiLiGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "JiLiGaming 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 33,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FJILI.png1718994198059?alt=media&token=86b85dee-5c91-4c67-9aa6-3159c46d96bb"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c36497"
+        },
+        "gpId": 1021,
+        "gpName": "OGLive",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "OGLive 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 134,
+        "status": false,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FOG%20Live.png1718996762510?alt=media&token=750ab414-e6fb-4f14-b3aa-0d23fc2da576"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c36498"
+        },
+        "gpId": 1024,
+        "gpName": "AFBCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "AFBCasino 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 135,
+        "status": false,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FAFB%20CASINO.png1718996403300?alt=media&token=1c98ff1b-5f35-4c25-9c32-d7b40bb5dde9"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c36499"
+        },
+        "gpId": 1025,
+        "gpName": "PlayTech Live Casino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "PlayTech Live Casino 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 36,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FPLAYTECH.png1718994944683?alt=media&token=a07dcd9f-e685-4b8c-a009-afe7156b6c66"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c3649a"
+        },
+        "gpId": 1026,
+        "gpName": "Rich88",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Rich88 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 37,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRICH%2088.png1718990367763?alt=media&token=ab817dc6-e60f-4b3c-8e96-3289b3ad4e8a"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c3649b"
+        },
+        "gpId": 1027,
+        "gpName": "MicroGaming LiveCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "MGLC 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 138,
+        "status": false,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://i.ibb.co/ZGJP8sB/D37-logo.png"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c3649c"
+        },
+        "gpId": 1029,
+        "gpName": "568WinGames",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "568WinGames 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 39,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://i.ibb.co/ZGJP8sB/D37-logo.png"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c3649d"
+        },
+        "gpId": 1030,
+        "gpName": "DreamGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "DG梦幻娱乐城 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 140,
+        "status": false,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FDREAM%20GAMING.png1718996463483?alt=media&token=1797d0e8-026a-4989-bf41-4b7dec6043d9"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c3649e"
+        },
+        "gpId": 1031,
+        "gpName": "Habanero",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Habanero 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 41,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FHABANERO.png1718990781080?alt=media&token=79a9496e-25a2-4027-9061-38445832145e"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c3649f"
+        },
+        "gpId": 1032,
+        "gpName": "RelaxGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "RelaxGaming 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 42,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRELAX%20GAMING.png1718990818994?alt=media&token=913c89dc-e736-46f0-98b5-4d2cabb6d116"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364a0"
+        },
+        "gpId": 1033,
+        "gpName": "KingMidas",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "KingMidas 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 43,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FKING%20MIDAS.png1718990854460?alt=media&token=93812af7-023c-4903-bd0c-e2df5dc49415"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364a1"
+        },
+        "gpId": 1034,
+        "gpName": "AdvantPlay",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "AdvantPlay 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 44,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FADVENT%20PLAY.png1718990912837?alt=media&token=255e6a67-778b-47c0-87b8-5bb017a844c8"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364a2"
+        },
+        "gpId": 1035,
+        "gpName": "AsiaGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "AsiaGaming 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 145,
+        "status": false,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FAsia%20Gaming.png1718996573712?alt=media&token=71ade35d-24ff-42b4-a17e-527d9273a120"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364a3"
+        },
+        "gpId": 1036,
+        "gpName": "Live22",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Live22 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 146,
+        "status": false,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FLive22.png1718996595479?alt=media&token=1329351f-445f-4ece-903f-a68acb6be4fb"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364a4"
+        },
+        "gpId": 1037,
+        "gpName": "WE Casino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "世界娱乐 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 47,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FWE%20CASINO.png1718991166111?alt=media&token=90ca7d33-46f3-45a5-8f61-c3581ccd3ec9"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364a5"
+        },
+        "gpId": 1038,
+        "gpName": "Netent",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Netent 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 48,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FNETENT.png1718991194909?alt=media&token=8ec3d85d-6a7c-4846-8b10-8a62d61224b8"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364a6"
+        },
+        "gpId": 1039,
+        "gpName": "BigTimeGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "BigTimeGaming 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 49,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FBIG%20TIME%20GAMING.png1718991259034?alt=media&token=47ae8711-6f2f-4d9e-b444-a89f02c525ed"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364a7"
+        },
+        "gpId": 1040,
+        "gpName": "NoLimitCity",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "NoLimitCity 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 50,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FNO%20LIMIT%20CITY.png1718991642084?alt=media&token=5d8727fb-92aa-413e-893f-e930aac883e8"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364a8"
+        },
+        "gpId": 1041,
+        "gpName": "93connect",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "93connect 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 51,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2F93%20CONNECT.png1718991725089?alt=media&token=9108e8d8-9fc7-4784-99aa-378086129042"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364a9"
+        },
+        "gpId": 1042,
+        "gpName": "KAGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "KAGaming 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 52,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FKA%20GAMING.png1718991790251?alt=media&token=18c6394c-b008-4062-93c5-6a1f54c5cd1d"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364aa"
+        },
+        "gpId": 1043,
+        "gpName": "WCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "WCasino 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 153,
+        "status": false,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FWCasino.png1718996616046?alt=media&token=9c8b6e00-f614-4f30-aedf-5b8b4ac78bdd"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364ab"
+        },
+        "gpId": 1044,
+        "gpName": "PlayStar",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "PlayStar 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 54,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FPlaystar-provider.webp1718992389999?alt=media&token=b15c5c36-b779-46f6-8f6f-b71ab3b5e24c"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364ac"
+        },
+        "gpId": 1045,
+        "gpName": "MikiWorld",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "MikiWorld 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 155,
+        "status": false,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FMiki%20World.png1718996656565?alt=media&token=18a3f80c-6b1a-41d6-a804-47ea55615ea1"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364ad"
+        },
+        "gpId": 1046,
+        "gpName": "FaChai",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "FaChai 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 56,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FFaChai.png1718995162144?alt=media&token=1a17d673-eb25-4d6e-9aad-b03b9062362f"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364ae"
+        },
+        "gpId": 1047,
+        "gpName": "GamePlaySlot",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "GamePlaySlot 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 57,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FGamePlay.png1718995229149?alt=media&token=62d7f50a-e3a9-4dfd-98ac-426f665934fd"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364af"
+        },
+        "gpId": 1048,
+        "gpName": "GameplayLiveCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "GameplayLiveCasino 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 58,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FGamePlay.png1718995319452?alt=media&token=4c4d4524-56f6-4c69-8ecb-d02e2da5e550"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364b0"
+        },
+        "gpId": 1049,
+        "gpName": "GameplayLottery",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "GameplayLottery 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 59,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FGamePlay.png1718995326733?alt=media&token=79d6691e-165f-400e-a6d2-5bfa5d356b76"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364b1"
+        },
+        "gpId": 1050,
+        "gpName": "BoleGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "BoleGaming 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 60,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FD51_logo.png1718995408537?alt=media&token=cabd5e9e-3266-4b9f-9ecb-8454bb6b44ca"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364b2"
+        },
+        "gpId": 1054,
+        "gpName": "LambdaGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "LambdaGaming 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 4,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FLAMBADA.png1718993936504?alt=media&token=d2f00b85-f462-4ff0-abbb-3b5d6142a884"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364b3"
+        },
+        "gpId": 1055,
+        "gpName": "WGBCockfighting",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "星球搏鸡 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 62,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://i.ibb.co/ZGJP8sB/D37-logo.png"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364b4"
+        },
+        "gpId": 1056,
+        "gpName": "WGBFishing",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "星球捕鱼 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 63,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://i.ibb.co/ZGJP8sB/D37-logo.png"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364b5"
+        },
+        "gpId": 1057,
+        "gpName": "WGBSlot",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "星球游戏 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 64,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://i.ibb.co/ZGJP8sB/D37-logo.png"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364b6"
+        },
+        "gpId": 1058,
+        "gpName": "LG88",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "LG88 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 65,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://i.ibb.co/ZGJP8sB/D37-logo.png"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364b7"
+        },
+        "gpId": 1059,
+        "gpName": "2win",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "2win 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 66,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://i.ibb.co/ZGJP8sB/D37-logo.png"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364b8"
+        },
+        "gpId": 1060,
+        "gpName": "VEGASLOST",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "VEGASLOST 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 67,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://i.ibb.co/ZGJP8sB/D37-logo.png"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364b9"
+        },
+        "gpId": 1061,
+        "gpName": "IDN Poker",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "IDN Poker 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 68,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FIDN.png1718996157518?alt=media&token=8594cd72-6168-426d-aaa8-fe08ea002a3c"
+    },
+    {
+        "_id": {
+            "$oid": "6644eabc0793614d39c364ba"
+        },
+        "gpId": 1062,
+        "gpName": "Slotgame66",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Slotgame66 大厅",
+        "device": [
+            "Desktop",
+            "Mobile"
+        ],
+        "priority": 69,
+        "status": true,
+        "site_auth_key": "BitAuthKey234",
+        "__v": 0,
+        "image_url": "https://i.ibb.co/ZGJP8sB/D37-logo.png"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d282"
+        },
+        "gpId": 0,
+        "gpName": "WM",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "完美大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 3,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d283"
+        },
+        "gpId": 2,
+        "gpName": "CQNine",
+        "gameId": 0,
+        "gameName": "CQ9 Lobby",
+        "gameNameChinese": "CQ9 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 15,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d284"
+        },
+        "gpId": 3,
+        "gpName": "PragmaticPlay",
+        "gameId": 0,
+        "gameName": "PragmaticPlay Lobby",
+        "gameNameChinese": "PragmaticPlay 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 1,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d285"
+        },
+        "gpId": 5,
+        "gpName": "BigGaming",
+        "gameId": 0,
+        "gameName": "BigGaming Lobby",
+        "gameNameChinese": "BigGaming 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 106,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d286"
+        },
+        "gpId": 7,
+        "gpName": "SexyBaccarat",
+        "gameId": 0,
+        "gameName": "SexyBaccarat Lobby",
+        "gameNameChinese": "性感百家乐 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 105,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d287"
+        },
+        "gpId": 10,
+        "gpName": "JokerGaming",
+        "gameId": 0,
+        "gameName": "JokerGaming Lobby",
+        "gameNameChinese": "JokerGaming 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 8,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d288"
+        },
+        "gpId": 11,
+        "gpName": "RTG",
+        "gameId": 0,
+        "gameName": "RealTimeGaming Lobby",
+        "gameNameChinese": "RealTimeGaming 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 9,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d289"
+        },
+        "gpId": 12,
+        "gpName": "ION Live Casino",
+        "gameId": 0,
+        "gameName": "ION Live Casino Lobby",
+        "gameNameChinese": "ION Live Casino 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 110,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d28a"
+        },
+        "gpId": 13,
+        "gpName": "World Match",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "World Match 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 11,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d28b"
+        },
+        "gpId": 14,
+        "gpName": "SBO Slot",
+        "gameId": 14000000,
+        "gameName": "SBO New Game Lobby",
+        "gameNameChinese": "SBO 游戏大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 12,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d28c"
+        },
+        "gpId": 16,
+        "gpName": "FunkyGames",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "FunkyGames 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 13,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d28d"
+        },
+        "gpId": 19,
+        "gpName": "SaGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "SaGaming 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 114,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d28e"
+        },
+        "gpId": 20,
+        "gpName": "EvolutionGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "EvolutionGaming 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 2,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d28f"
+        },
+        "gpId": 22,
+        "gpName": "Yggdrasil",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Yggdrasil 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": true,
+        "priority": 16,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d290"
+        },
+        "gpId": 28,
+        "gpName": "Allbet",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Allbet 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 117,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d291"
+        },
+        "gpId": 29,
+        "gpName": "MicroGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "MicroGaming 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": true,
+        "priority": 18,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d292"
+        },
+        "gpId": 30,
+        "gpName": "CQNineLC",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "CQNineLC 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 119,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d293"
+        },
+        "gpId": 33,
+        "gpName": "Green Dragon",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Green Dragon 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": false,
+        "priority": 120,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d294"
+        },
+        "gpId": 35,
+        "gpName": "PGSoft",
+        "gameId": 0,
+        "gameName": "PGSoft Lobby",
+        "gameNameChinese": "PGSoft 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": true,
+        "priority": 21,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d296"
+        },
+        "gpId": 36,
+        "gpName": "FlowGamingHub",
+        "gameId": 36000002,
+        "gameName": "Lobby",
+        "gameNameChinese": "Kiron 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": true,
+        "priority": 22,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    },
+    {
+        "_id": {
+            "$oid": "661ae1b8c66bd7bd2438d299"
+        },
+        "gpId": 38,
+        "gpName": "PragmaticPlayCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "PragmaticPlayCasino 大厅",
+        "device": [
+            "Desktop"
+        ],
+        "status": true,
+        "priority": 23,
+        "site_auth_key": "BitAuthKey234",
+        "image_url": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2FRED%20TIGER.png1718993956102?alt=media&token=92aaf4bc-eb0e-479b-a3b4-847bcb17b708"
+    }
+]

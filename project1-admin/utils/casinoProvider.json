@@ -1,0 +1,766 @@
+{
+    "all_providers": [
+      {
+        "gpId": 10000,
+        "gpName": "Games Lobby",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Games 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 10000,
+        "gpName": "Casino Lobby",
+        "gameId": 1,
+        "gameName": "Lobby",
+        "gameNameChinese": "Casino 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 0,
+        "gpName": "WM",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "完美大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 2,
+        "gpName": "CQNine",
+        "gameId": 0,
+        "gameName": "CQ9 Lobby",
+        "gameNameChinese": "CQ9 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 3,
+        "gpName": "PragmaticPlay",
+        "gameId": 0,
+        "gameName": "PragmaticPlay Lobby",
+        "gameNameChinese": "PragmaticPlay 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 5,
+        "gpName": "BigGaming",
+        "gameId": 0,
+        "gameName": "BigGaming Lobby",
+        "gameNameChinese": "BigGaming 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 7,
+        "gpName": "SexyBaccarat",
+        "gameId": 0,
+        "gameName": "SexyBaccarat Lobby",
+        "gameNameChinese": "性感百家乐 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 10,
+        "gpName": "JokerGaming",
+        "gameId": 0,
+        "gameName": "JokerGaming Lobby",
+        "gameNameChinese": "JokerGaming 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 11,
+        "gpName": "RTG",
+        "gameId": 0,
+        "gameName": "RealTimeGaming Lobby",
+        "gameNameChinese": "RealTimeGaming 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 12,
+        "gpName": "ION Live Casino",
+        "gameId": 0,
+        "gameName": "ION Live Casino Lobby",
+        "gameNameChinese": "ION Live Casino 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 13,
+        "gpName": "World Match",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "World Match 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 14,
+        "gpName": "SBO Slot",
+        "gameId": 14000000,
+        "gameName": "SBO New Game Lobby",
+        "gameNameChinese": "SBO 游戏大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 16,
+        "gpName": "FunkyGames",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "FunkyGames 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 19,
+        "gpName": "SaGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "SaGaming 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 20,
+        "gpName": "EvolutionGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "EvolutionGaming 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 22,
+        "gpName": "Yggdrasil",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Yggdrasil 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 28,
+        "gpName": "Allbet",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Allbet 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 29,
+        "gpName": "MicroGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "MicroGaming 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 30,
+        "gpName": "CQNineLC",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "CQNineLC 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 33,
+        "gpName": "Green Dragon",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Green Dragon 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 35,
+        "gpName": "PGSoft",
+        "gameId": 0,
+        "gameName": "PGSoft Lobby",
+        "gameNameChinese": "PGSoft 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 36,
+        "gpName": "FlowGamingHub",
+        "gameId": 36000001,
+        "gameName": "Lobby",
+        "gameNameChinese": "Netent 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 36,
+        "gpName": "FlowGamingHub",
+        "gameId": 36000002,
+        "gameName": "Lobby",
+        "gameNameChinese": "Kiron 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 36,
+        "gpName": "FlowGamingHub",
+        "gameId": 36000004,
+        "gameName": "Lobby",
+        "gameNameChinese": "PlayNGo 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 36,
+        "gpName": "FlowGamingHub",
+        "gameId": 36000005,
+        "gameName": "Lobby",
+        "gameNameChinese": "QuickSpin 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 38,
+        "gpName": "PragmaticPlayCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "PragmaticPlayCasino 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 39,
+        "gpName": "RedTiger",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "RedTiger 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 46,
+        "gpName": "Sv388Cockfighting",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Sv388Cockfighting 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 47,
+        "gpName": "GiocoPlus",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "GiocoPlus 大厅",
+        "device": ["Desktop"]
+      },
+      {
+        "gpId": 1000,
+        "gpName": "ArcadiaGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "ArcadiaGaming 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1009,
+        "gpName": "MPoker",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "泰富豪棋牌 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1010,
+        "gpName": "YGR",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "YGR 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1012,
+        "gpName": "TCGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "TCGaming 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1016,
+        "gpName": "AFBGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "AFBGaming 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1019,
+        "gpName": "YeeBet",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "YeeBet 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1020,
+        "gpName": "JiLiGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "JiLiGaming 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1021,
+        "gpName": "OGLive",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "OGLive 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1024,
+        "gpName": "AFBCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "AFBCasino 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1025,
+        "gpName": "PlayTech Live Casino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "PlayTech Live Casino 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1026,
+        "gpName": "Rich88",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Rich88 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1027,
+        "gpName": "MicroGaming LiveCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "MGLC 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1029,
+        "gpName": "568WinGames",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "568WinGames 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1030,
+        "gpName": "DreamGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "DG梦幻娱乐城 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1031,
+        "gpName": "Habanero",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Habanero 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1032,
+        "gpName": "RelaxGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "RelaxGaming 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1033,
+        "gpName": "KingMidas",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "KingMidas 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1034,
+        "gpName": "AdvantPlay",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "AdvantPlay 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1035,
+        "gpName": "AsiaGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "AsiaGaming 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1036,
+        "gpName": "Live22",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Live22 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1037,
+        "gpName": "WE Casino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "世界娱乐 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1038,
+        "gpName": "Netent",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Netent 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1039,
+        "gpName": "BigTimeGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "BigTimeGaming 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1040,
+        "gpName": "NoLimitCity",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "NoLimitCity 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1041,
+        "gpName": "93connect",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "93connect 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1042,
+        "gpName": "KAGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "KAGaming 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1043,
+        "gpName": "WCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "WCasino 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1044,
+        "gpName": "PlayStar",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "PlayStar 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1045,
+        "gpName": "MikiWorld",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "MikiWorld 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1046,
+        "gpName": "FaChai",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "FaChai 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1047,
+        "gpName": "GamePlaySlot",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "GamePlaySlot 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1048,
+        "gpName": "GameplayLiveCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "GameplayLiveCasino 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1049,
+        "gpName": "GameplayLottery",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "GameplayLottery 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1050,
+        "gpName": "BoleGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "BoleGaming 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1054,
+        "gpName": "LambdaGaming",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "LambdaGaming 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1055,
+        "gpName": "WGBCockfighting",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "星球搏鸡 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1057,
+        "gpName": "CC88",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "CC88 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1058,
+        "gpName": "JDB",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "JDB 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1059,
+        "gpName": "Clotplay",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "Clotplay 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1060,
+        "gpName": "PegasusSlot",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "PegasusSlot 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1062,
+        "gpName": "DragoonSoft",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "DragoonSoft 大厅",
+        "device": ["Desktop", "Mobile"]
+      },
+      {
+        "gpId": 1064,
+        "gpName": "ViaCasino",
+        "gameId": 0,
+        "gameName": "Lobby",
+        "gameNameChinese": "ViaCasino 大厅",
+        "device": ["Desktop", "Mobile"]
+      }
+    ],
+    "all_providers_name": {
+      "10000": "Games Lobby",
+      "10001": "Casino Lobby",
+      "0": "WM",
+      "2": "CQNine",
+      "3": "PragmaticPlay",
+      "5": "BigGaming",
+      "7": "SexyBaccarat",
+      "10": "JokerGaming",
+      "11": "RTG",
+      "12": "ION Live Casino",
+      "13": "World Match",
+      "14": "SBO Slot",
+      "16": "FunkyGames",
+      "19": "SaGaming",
+      "20": "EvolutionGaming",
+      "22": "Yggdrasil",
+      "28": "Allbet",
+      "29": "MicroGaming",
+      "30": "CQNineLC",
+      "33": "Green Dragon",
+      "35": "PGSoft",
+      "36": "FlowGamingHub",
+      "38": "PragmaticPlayCasino",
+      "39": "RedTiger",
+      "46": "Sv388Cockfighting",
+      "47": "GiocoPlus",
+      "1000": "ArcadiaGaming",
+      "1009": "MPoker",
+      "1010": "YGR",
+      "1012": "TCGaming",
+      "1016": "AFBGaming",
+      "1019": "YeeBet",
+      "1020": "JiLiGaming",
+      "1021": "OGLive",
+      "1024": "AFBCasino",
+      "1025": "PlayTech Live Casino",
+      "1026": "Rich88",
+      "1027": "MicroGaming LiveCasino",
+      "1029": "568WinGames",
+      "1030": "DreamGaming",
+      "1031": "Habanero",
+      "1032": "RelaxGaming",
+      "1033": "KingMidas",
+      "1034": "AdvantPlay",
+      "1035": "AsiaGaming",
+      "1036": "Live22",
+      "1037": "WE Casino",
+      "1038": "Netent",
+      "1039": "BigTimeGaming",
+      "1040": "NoLimitCity",
+      "1041": "93connect",
+      "1042": "KAGaming",
+      "1043": "WCasino",
+      "1044": "PlayStar",
+      "1045": "MikiWorld",
+      "1046": "FaChai",
+      "1047": "GamePlaySlot",
+      "1048": "GameplayLiveCasino",
+      "1049": "GameplayLottery",
+      "1050": "BoleGaming",
+      "1054": "LambdaGaming",
+      "1055": "WGBCockfighting",
+      "1057": "CC88",
+      "1058": "JDB",
+      "1059": "Clotplay",
+      "1060": "PegasusSlot",
+      "1062": "DragoonSoft",
+      "1064": "ViaCasino"
+    },
+  
+  
+    "provider_name": [
+      "RedTiger",
+      "Sv388Cockfighting",
+      "GiocoPlus",
+      "ArcadiaGaming",
+      "MPoker",
+      "YGR",
+      "TCGaming",
+      "AFBGaming",
+      "YeeBet",
+      "JiLiGaming",
+      "OGLive",
+      "AFBCasino",
+      "PlayTech Live Casino",
+      "Rich88",
+      "MicroGaming LiveCasino",
+      "568WinGames",
+      "DreamGaming",
+      "Habanero",
+      "RelaxGaming",
+      "KingMaker",
+      "AdvantPlay",
+      "AsiaGaming",
+      "Live22",
+      "WE Casino"
+    ],
+  
+    "gameCategory": [
+      {
+        "_id": {
+          "$oid": "662296f141a0fe3222294228"
+        },
+        "original_name": "Top",
+        "name": "Tops",
+        "link": "/casino/top-rated-games/Top",
+        "icon": "https://firebasestorage.googleapis.com/v0/b/kudos-next.appspot.com/o/blog%2Fempty.png1713597830169?alt=media&token=2d00fbce-d9be-434e-8b19-359c978ea93c"
+      },
+      {
+        "_id": {
+          "$oid": "662296f141a0fe3222294229"
+        },
+        "original_name": "Popular",
+        "name": "",
+        "link": "/casino/top-rated-games/Top",
+        "icon": null
+      },
+      {
+        "_id": {
+          "$oid": "662296f141a0fe322229422a"
+        },
+        "original_name": "Slots",
+        "name": "",
+        "link": "/game-category/201/Slots",
+        "icon": null
+      },
+  
+      {
+        "_id": {
+          "$oid": "662296f141a0fe322229422b"
+        },
+        "original_name": "Live Casino",
+        "name": "Live Casino",
+        "link": "/game-category/100/Live%20Casino",
+        "icon": "https://playzzilla.netlify.app/assets/plzslots-02db98c8.svg"
+      },
+      {
+        "_id": {
+          "$oid": "662296f141a0fe322229422c"
+        },
+        "original_name": "Jackpots",
+        "name": "Jackpots",
+        "link": "/game-category/207/Jackpots",
+        "icon": "https://playzzilla.netlify.app/assets/plzjackpots-09672504.svg"
+      },
+      {
+        "_id": {
+          "$oid": "662296f141a0fe322229422d"
+        },
+        "original_name": "Table Games",
+        "name": "Table Games",
+        "link": "/game-category/204/Table%20Games",
+        "icon": "https://playzzilla.netlify.app/assets/plztable-981dfff2.svg"
+      },
+      {
+        "_id": {
+          "$oid": "662296f141a0fe322229422e"
+        },
+        "original_name": "Roullete",
+        "name": "Roullete",
+        "link": "/game-category/100/Live%20Casino",
+        "icon": "https://playzzilla.netlify.app/assets/plznew-853ba536.svg"
+      },
+      {
+        "_id": {
+          "$oid": "662296f141a0fe322229422f"
+        },
+        "original_name": "Black Jack",
+        "name": "Black Jack",
+        "link": "/game-category/102/Black%20Jack",
+        "icon": "https://playzzilla.netlify.app/assets/plznew-853ba536.svg"
+      },
+  
+      {
+        "_id": {
+          "$oid": "662296f141a0fe3222294230"
+        },
+        "original_name": "Poker",
+        "name": "Poker",
+        "link": "/game-category/107//Poker",
+        "icon": "https://playzzilla.netlify.app/assets/plznew-853ba536.svg"
+      },
+      {
+        "_id": {
+          "$oid": "662296f141a0fe3222294231"
+        },
+        "original_name": "All Games",
+        "name": "All Games",
+        "link": "/casino/all-games/All%20Games",
+        "icon": "https://playzzilla.netlify.app/assets/plzallgames-6e09cd2c.svg"
+      }
+    ]
+  }
+  
