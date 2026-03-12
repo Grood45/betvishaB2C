@@ -4,7 +4,21 @@ const OtpModel = require("../../models/otp.model");
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const twilioPhoneNumber = process.env.TWILIO_PHONE_NUMBER;
-const client = new twilio(accountSid, authToken);
+
+let client;
+if (accountSid && authToken) {
+  client = new twilio(accountSid, authToken);
+} else {
+  console.warn("[OTP Service] Twilio credentials missing. SMS functionality will be disabled.");
+  client = {
+    messages: {
+      create: async () => {
+        console.log("[OTP Service Mock] SMS would be sent if Twilio was configured.");
+        return { sid: "MOCK_SID" };
+      }
+    }
+  };
+}
 
 
 

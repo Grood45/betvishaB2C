@@ -33,7 +33,7 @@ const SportsPage = () => {
 
         try {
             const response = await axios.post(
-                `${import.meta.env.VITE_API_URL}/api/sport/get-lucky-sport-token`,
+                `${import.meta.env.VITE_API_URL}/api/sport/get-lucky-sport-session`,
                 {},
                 {
                     headers: {

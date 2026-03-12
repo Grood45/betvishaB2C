@@ -450,15 +450,13 @@ const UpdateDocumentDetails = async (req, res) => {
 
 const RegisterUser = async (req, res) => {
   const userData = req.body;
-  const session = await mongoose.startSession(); // Start a session
+  const session = await mongoose.startSession();
 
   try {
-    session.startTransaction(); // Start the transaction
-    // Encrypt the password
+    // 1. Move CPU-intensive hashing OUTSIDE the transaction for performance
     const hashedPassword = await EncryptPassword(userData.password);
-
-    // Get the current timestamp
     const timestamp = GetCurrentTime();
+
     // Prepare data for the new user
     let newData = {
       ...userData,
@@ -476,155 +474,151 @@ const RegisterUser = async (req, res) => {
       site_auth_key: userData.site_auth_key,
       last_bonus_calculation_time: GetCurrentDateTime()
     };
-    // Check if agent data is available for the given currency
-    const getSetting = await Setting.findOne({
-      site_auth_key: userData.site_auth_key,
-    })
-      .select("is_signup_enabled")
-      .session(session); // Include session in the query
 
-    if (!getSetting || !getSetting.is_signup_enabled) {
-      console.log('Signup is not enabled for this site.');
-      await session.abortTransaction(); // Abort the transaction
-      session.endSession(); // End the session
-      return res.status(403).json({
-        status: 403,
-        success: false,
-        message:
-          "Registration is not enabled. Please contact the administrator for further assistance.",
-      });
-    }
+    let resultUser = null;
 
-    // Create a new user based on the registration data
-    const newUser = new User(newData);
-    const user = await newUser.save({ session }); // Save the new user and include the session
-    const userId = user._id;
-    // Referral handling
-    let referByRoleType = ""
-    if (newData?.refer_by_code) {
-      referByRoleType = "affiliate"
-      let referByData = await Admin.findOne({
-        affiliate_code: newData?.refer_by_code,
-        role_type: "affiliate",
-      }).session(session); // Check for admin (affiliate) referral first
+    // 2. Use withTransaction for automatic retries on TransientTransactionErrors
+    await session.withTransaction(async () => {
+      // Check if signup is enabled
+      const getSetting = await Setting.findOne({
+        site_auth_key: userData.site_auth_key,
+      }).select("is_signup_enabled").session(session);
 
-      if (!referByData) {
-        referByRoleType = "user";
-        // If not found, check user referral
-        referByData = await User.findOne({
-          referral_code: newData?.refer_by_code,
-        }).session(session);
+      if (!getSetting || !getSetting.is_signup_enabled) {
+        throw new Error("REGISTRATION_DISABLED");
       }
 
-      if (referByData) {
-        // Fetch promotion data for referral bonuses
-        const promotionData = await GetPromotion({
-          category: "referral_bonus",
-          sub_category: "every_referral",
-        });
+      // Create and Save the User
+      const newUser = new User(newData);
+      const user = await newUser.save({ session });
+      resultUser = user;
 
-        // Prepare the referral payload
-        let payload = {
-          refer_by: referByData.username,
-          refer_by_id: referByData._id,
-          refer_by_role_type: referByRoleType,
-          referred_user: {
-            _id: userId,
-            username: newData.username,
-            name: newData?.full_name || newData?.first_name,
-          },
-          referral_code: newData?.refer_by_code,
-          steps_completed: {
-            is_registered: true,
-            is_deposited: false,
-            is_wager_completed: false,
-          },
-          site_auth_key: referByData.site_auth_key,
-          bonus_awarded: false,
-          last_bonus_calculation_time: GetCurrentDateTime(),
-        };
+      // Handle referrals
+      if (newData?.refer_by_code) {
+        let referByRoleType = "affiliate";
+        let referByData = await Admin.findOne({
+          affiliate_code: newData?.refer_by_code,
+          role_type: "affiliate",
+        }).session(session);
 
-        // Add promotion data if available
-        console.log(promotionData, "promotion data available")
-        if (promotionData) {
-          payload = {
-            ...payload,
-            bonus_amount: promotionData?.reward_amount || 0,
-            min_amount:
-              promotionData?.min_deposit || promotionData?.min_bet || 0,
-          };
+        if (!referByData) {
+          referByRoleType = "user";
+          referByData = await User.findOne({
+            referral_code: newData?.refer_by_code,
+          }).session(session);
         }
 
-        // Save referral data
-        const referralData = new Referral(payload);
-        await referralData.save({ session });
+        if (referByData) {
+          const promotionData = await GetPromotion({
+            category: "referral_bonus",
+            sub_category: "every_referral",
+          });
+
+          let payload = {
+            refer_by: referByData.username,
+            refer_by_id: referByData._id,
+            refer_by_role_type: referByRoleType,
+            referred_user: {
+              _id: user._id,
+              username: newData.username,
+              name: newData?.full_name || newData?.first_name,
+            },
+            referral_code: newData?.refer_by_code,
+            steps_completed: {
+              is_registered: true,
+              is_deposited: false,
+              is_wager_completed: false,
+            },
+            site_auth_key: referByData.site_auth_key,
+            bonus_awarded: false,
+            last_bonus_calculation_time: GetCurrentDateTime(),
+          };
+
+          if (promotionData) {
+            payload = {
+              ...payload,
+              bonus_amount: promotionData?.reward_amount || 0,
+              min_amount: promotionData?.min_deposit || promotionData?.min_bet || 0,
+            };
+          }
+
+          const referralData = new Referral(payload);
+          await referralData.save({ session });
+        }
       }
-    }
 
-    // Generate JWT tokens
+      // 3. Coordinate with external Casino API 
+      // Rollback DB if provider fails to register
+      let casinoPlayer = {
+        Username: userData.username,
+        UserGroup: "f",
+        Agent: GetAgentData("INR"),
+        CompanyKey: process.env.COMPANY_KEY,
+        ServerId: process.env.SERVER_ID,
+      };
 
-    const typeToken = GenrateJwtToken(user.role_type);
-    const usernameToken = GenrateJwtToken(user.username);
+      const casinoUserData = await axios.post(
+        `${process.env.CASINO_BASE_URL}/web-root/restricted/player/register-player.aspx`,
+        casinoPlayer
+      );
 
-    // Call external API to register casino player
+      if (casinoUserData?.data?.error?.msg !== "No Error") {
+        throw new Error(`Casino Provider Error: ${casinoUserData?.data?.error?.msg}`);
+      }
+    });
 
-    let casinoPlayer = {
-      Username: userData.username,
-      UserGroup: "f",
-      Agent: GetAgentData("INR"),
-      CompanyKey: process.env.COMPANY_KEY,
-      ServerId: process.env.SERVER_ID,
-    };
+    session.endSession();
 
-    let casinoUserData = await axios.post(
-      `${process.env.CASINO_BASE_URL}/web-root/restricted/player/register-player.aspx`,
-      casinoPlayer
-    );
+    // Success Response
+    const typeToken = GenrateJwtToken(resultUser.role_type);
+    const usernameToken = GenrateJwtToken(resultUser.username);
 
-    if (casinoUserData?.data?.error?.msg !== "No Error") {
-      await session.abortTransaction(); // Abort the transaction
-      session.endSession(); // End the session
-      return res.status(500).json({
-        status: 500,
-        success: false,
-        data: {},
-        message: casinoUserData?.data?.error?.msg,
-      });
-    }
-
-    // Commit the transaction if everything is successful
-    await session.commitTransaction();
-    session.endSession(); // End the session
-    // Send a success response with the token and user data
     return res.status(201).json({
       status: 201,
       success: true,
       message: "User registered successfully.",
-      user: user,
+      user: resultUser,
       data: {
         token: typeToken,
         usernameToken,
       },
       redirect: "/",
     });
+
   } catch (error) {
-    console.log('Error during registration process:', error.message);
-    await session.abortTransaction(); // Abort the transaction in case of error
-    session.endSession(); // End the session
+    if (session.inAtomicityRoot) await session.abortTransaction();
+    session.endSession();
+
+    // Enhanced Logging for 20-year dev level debugging
+    const errorDetail = error.response ? {
+      status: error.response.status,
+      data: error.response.data,
+      url: error.config?.url
+    } : error.message;
+
+    console.error('Registration Failure Details:', JSON.stringify(errorDetail, null, 2));
+
+    if (error.message === "REGISTRATION_DISABLED") {
+      return res.status(403).json({
+        status: 403,
+        success: false,
+        message: "Registration is not enabled. Please contact support."
+      });
+    }
 
     let status = 500;
     let message = error.message;
 
     if (error.code === 11000) {
-      console.log('Duplicate user error:', error.message);
       status = 400;
       message = "A user with this username or email already exists.";
     }
 
-    res.status(status).json({
+    return res.status(status).json({
       status: status,
       success: false,
       message: message,
+      technicalDetail: error.response?.data || null
     });
   }
 };

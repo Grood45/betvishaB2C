@@ -37,11 +37,15 @@ const LuckySportManage = () => {
     const [isDirty, setIsDirty] = useState(false);
     const [latency, setLatency] = useState(null);
     const [isTesting, setIsTesting] = useState(false);
+    const [quota, setQuota] = useState(null);
+    const [fetchingQuota, setFetchingQuota] = useState(false);
 
     const [formData, setFormData] = useState({
         provider_name: "LuckySport",
         cert_key: "",
         agent_code: "",
+        merchant_code: "",
+        jwt_secret: "",
         callback_url: "",
         provider_logo: "",
         provider_image: "",
@@ -64,6 +68,8 @@ const LuckySportManage = () => {
                     provider_name: "LuckySport",
                     cert_key: response.data.cert_key || "",
                     agent_code: response.data.agent_code || "",
+                    merchant_code: response.data.merchant_code || "", // Added
+                    jwt_secret: response.data.jwt_secret || "",       // Added
                     callback_url: response.data.callback_url || "",
                     provider_logo: response.data.provider_logo || "",
                     provider_image: response.data.provider_image || "",
@@ -82,9 +88,25 @@ const LuckySportManage = () => {
         }
     }, [t]);
 
+    const fetchQuota = useCallback(async () => {
+        setFetchingQuota(true);
+        try {
+            const url = `${import.meta.env.VITE_API_URL}/api/sport/lucky-sport/merchant-quota`;
+            const response = await fetchGetRequest(url);
+            if (response && response.success) {
+                setQuota(response.quota);
+            }
+        } catch (error) {
+            console.error("Error fetching quota:", error);
+        } finally {
+            setFetchingQuota(false);
+        }
+    }, []);
+
     useEffect(() => {
         getProviderSetup();
-    }, [getProviderSetup]);
+        fetchQuota();
+    }, [getProviderSetup, fetchQuota]);
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -304,12 +326,26 @@ const LuckySportManage = () => {
 
                             <VStack spacing={5} align="stretch">
                                 <FormControl variant="floating">
-                                    <FormLabel fontSize="10px" fontWeight="800" color="gray.400" mb={1} ml={1}>CERT KEY</FormLabel>
+                                    <FormLabel fontSize="10px" fontWeight="800" color="gray.400" mb={1} ml={1}>API KEY</FormLabel>
                                     <Input
                                         name="cert_key"
                                         value={formData.cert_key}
                                         onChange={handleInputChange}
-                                        placeholder="Enter Secure Key"
+                                        placeholder="Enter LuckySport API Key"
+                                        bg="gray.50"
+                                        border="none"
+                                        rounded="lg"
+                                        _focus={{ bg: "white", shadow: "sm", border: "1px solid", borderColor: bg }}
+                                    />
+                                </FormControl>
+
+                                <FormControl variant="floating">
+                                    <FormLabel fontSize="10px" fontWeight="800" color="gray.400" mb={1} ml={1}>MERCHANT CODE</FormLabel>
+                                    <Input
+                                        name="merchant_code"
+                                        value={formData.merchant_code}
+                                        onChange={handleInputChange}
+                                        placeholder="Enter Merchant Code"
                                         bg="gray.50"
                                         border="none"
                                         rounded="lg"
@@ -331,6 +367,20 @@ const LuckySportManage = () => {
                                     />
                                 </FormControl>
 
+                                <FormControl variant="floating">
+                                    <FormLabel fontSize="10px" fontWeight="800" color="green.500" mb={1} ml={1}>WEBHOOK JWT SECRET</FormLabel>
+                                    <Input
+                                        name="jwt_secret"
+                                        value={formData.jwt_secret}
+                                        onChange={handleInputChange}
+                                        placeholder="Secret for JWT verification"
+                                        bg="green.50"
+                                        border="none"
+                                        rounded="lg"
+                                        _focus={{ bg: "white", shadow: "sm", border: "1px solid", borderColor: "green.400" }}
+                                    />
+                                </FormControl>
+
                                 <Box p={3} rounded="xl" bg="gray.900" color="white" shadow="xl">
                                     <Flex justify="space-between" align="center">
                                         <HStack spacing={2}>
@@ -343,6 +393,59 @@ const LuckySportManage = () => {
                                     </Flex>
                                 </Box>
                             </VStack>
+                        </MotionBox>
+
+                        <MotionBox
+                            initial={{ y: 20, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            transition={{ delay: 0.05 }}
+                            bg={quota !== null && quota < 100 ? "red.50" : "white"}
+                            rounded="2xl"
+                            p={6}
+                            border="1px solid"
+                            borderColor={quota !== null && quota < 100 ? "red.200" : "gray.100"}
+                            shadow="sm"
+                            position="relative"
+                            overflow="hidden"
+                        >
+                            {quota !== null && quota < 100 && (
+                                <Box position="absolute" top={0} left={0} w="100%" h="2px" bg="red.400" className="bg-pulse-red-animation" />
+                            )}
+                            <Flex align="center" justify="space-between" mb={4}>
+                                <HStack spacing={3}>
+                                    <Center w="40px" h="40px" bg={quota !== null && quota < 100 ? "red.100" : "green.50"} rounded="xl" color={quota !== null && quota < 100 ? "red.500" : "green.500"}>
+                                        <FaBolt size={18} />
+                                    </Center>
+                                    <VStack align="start" spacing={0}>
+                                        <Text fontWeight="800" fontSize="sm">Merchant Quota</Text>
+                                        <Text fontSize="10px" color="gray.500">PROVIDER CREDIT LINE</Text>
+                                    </VStack>
+                                </HStack>
+                                <IconButton
+                                    icon={fetchingQuota ? <Spinner size="xs" /> : <MdRefresh />}
+                                    variant="ghost"
+                                    size="sm"
+                                    rounded="full"
+                                    onClick={fetchQuota}
+                                    isDisabled={fetchingQuota}
+                                />
+                            </Flex>
+
+                            <Box mb={4}>
+                                <Text fontSize="24px" fontWeight="900" color={quota !== null && quota < 100 ? "red.600" : "gray.800"}>
+                                    {fetchingQuota ? "---" : quota !== null ? `$${quota.toLocaleString()}` : "N/A"}
+                                </Text>
+                                <Text fontSize="10px" fontWeight="bold" color={quota !== null && quota < 100 ? "red.400" : "gray.400"}>
+                                    {quota !== null && quota < 100 ? "CRITICAL: RECHARGE IMMEDIATELY" : "ACCOUNT HEALTHY"}
+                                </Text>
+                            </Box>
+
+                            <Progress
+                                value={quota !== null ? Math.min((quota / 500) * 100, 100) : 0}
+                                size="xs"
+                                colorScheme={quota !== null && quota < 100 ? "red" : "green"}
+                                rounded="full"
+                            />
                         </MotionBox>
 
                         <MotionBox
@@ -529,16 +632,45 @@ const LuckySportManage = () => {
                                 borderColor="gray.100"
                                 shadow="sm"
                             >
-                                <HStack spacing={3} mb={4}>
-                                    <MdHistory size={20} color="#A0AEC0" />
-                                    <Text fontWeight="800" fontSize="sm" color="gray.600">Sync History</Text>
+                                <HStack spacing={3} mb={6}>
+                                    <Center w="40px" h="40px" bg="green.50" rounded="xl" color="green.500">
+                                        <MdLink size={20} />
+                                    </Center>
+                                    <VStack align="start" spacing={0}>
+                                        <Text fontWeight="800" fontSize="sm">Seamless Wallet Webhooks</Text>
+                                        <Text fontSize="10px" color="gray.500">Provide these URLs to LuckySport Agent</Text>
+                                    </VStack>
                                 </HStack>
-                                <FeedbackAlert rounded="xl" variant="subtle" bg="blue.50" border="none">
-                                    <FaInfoCircle size={14} color="#3182CE" />
-                                    <Text fontSize="xs" ml={2} color="blue.700" fontWeight="medium">
-                                        Last configuration sync completed on March 5, 2026. All sports are active.
-                                    </Text>
-                                </FeedbackAlert>
+
+                                <VStack spacing={3} align="stretch">
+                                    {[
+                                        { label: "BALANCE", url: "/api/webhook/luckysport/balance" },
+                                        { label: "BET/MAKE", url: "/api/webhook/luckysport/bet/make" },
+                                        { label: "BET/WIN", url: "/api/webhook/luckysport/bet/win" },
+                                        { label: "ROLLBACK", url: "/api/webhook/luckysport/bet/rollback" }
+                                    ].map((webhook, idx) => (
+                                        <Flex key={idx} justify="space-between" align="center" p={3} bg="gray.50" rounded="xl" border="1px solid" borderColor="gray.100">
+                                            <VStack align="start" spacing={0}>
+                                                <Text fontSize="9px" fontWeight="900" color="gray.400">{webhook.label}</Text>
+                                                <Text fontSize="11px" fontWeight="700" color="gray.700">
+                                                    {window.location.origin.replace('admin.', '')}{webhook.url}
+                                                </Text>
+                                            </VStack>
+                                            <Tooltip label="Copy URL">
+                                                <IconButton
+                                                    icon={<MdCloudUpload />}
+                                                    size="xs"
+                                                    variant="ghost"
+                                                    onClick={() => {
+                                                        const fullUrl = `${window.location.origin.replace('admin.', '')}${webhook.url}`;
+                                                        navigator.clipboard.writeText(fullUrl);
+                                                        toast({ title: "Copied", status: "success", duration: 1000 });
+                                                    }}
+                                                />
+                                            </Tooltip>
+                                        </Flex>
+                                    ))}
+                                </VStack>
                             </MotionBox>
                         </VStack>
                     </Box>
@@ -559,8 +691,16 @@ const LuckySportManage = () => {
                     50% { opacity: 0.7; }
                     100% { opacity: 0.4; }
                 }
+                @keyframes bg-pulse-red {
+                    0% { opacity: 0.4; background-color: #F87171; }
+                    50% { opacity: 1; background-color: #EF4444; }
+                    100% { opacity: 0.4; background-color: #F87171; }
+                }
                 .bg-pulse-green-animation {
                     animation: bg-pulse-green 3s infinite ease-in-out;
+                }
+                .bg-pulse-red-animation {
+                    animation: bg-pulse-red 2s infinite ease-in-out;
                 }
             `}</style>
 

@@ -6,6 +6,8 @@ const sportSetupSchema = new Schema({
     provider_name: { type: String, required: true },
     cert_key: { type: String, default: "" },
     agent_code: { type: String, default: "" },
+    merchant_code: { type: String, default: "" }, // New field for LuckySport
+    jwt_secret: { type: String, default: "" },    // New field for Webhook security
     provider_image: { type: String, default: "" },
     provider_logo: { type: String, default: "" },
     sport_images: [{

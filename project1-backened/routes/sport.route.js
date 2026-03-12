@@ -1,7 +1,7 @@
 const express = require('express');
 const { GetKeyDepositAndLogin, WithdrawAndLogout, GetSportBalance, GetLastOneDayBetHistory, GetSportBalanceAdmin, GetAllSportBetHistoryUser, GetAllSportBetHistoryUserByAdmin } = require('../controllers/sportcontroller.js/sport.controller');
 const { getSportSetup, upsertSportSetup, getActiveSportProviders } = require('../controllers/sportcontroller.js/sportsetup.controller');
-const { GetLuckySportToken, GetLuckySportBetHistory, GetLuckySportBetHistoryUser } = require('../controllers/sportcontroller.js/luckysport.controller');
+const { GetLuckySportToken, GetLuckySportBetHistory, GetLuckySportBetHistoryUser, GetLuckySportSessionToken, GetLuckySportMerchantQuota } = require('../controllers/sportcontroller.js/luckysport.controller');
 const { GetUserBalanceWebhook, WithdrawWebhook, DepositWebhook } = require('../controllers/sportcontroller.js/luckysportwebhook.controller');
 const { queryDomainMiddleware } = require('../middlewares/applysportdomain.middleware');
 const SportRouter = express.Router();
@@ -23,6 +23,7 @@ SportRouter.post('/setup', upsertSportSetup);
 
 // LuckySport Endpoints
 SportRouter.post('/get-lucky-sport-token', GetLuckySportToken);
+SportRouter.post('/get-lucky-sport-session', GetLuckySportSessionToken);
 SportRouter.post('/lucky-sport/user-balance', GetUserBalanceWebhook);
 SportRouter.post('/lucky-sport/withdraw', WithdrawWebhook);
 SportRouter.post('/lucky-sport/deposit', DepositWebhook);
@@ -30,5 +31,6 @@ SportRouter.post('/lucky-sport/deposit', DepositWebhook);
 // LuckySport History
 SportRouter.post('/get-lucky-sport-bet-history', GetLuckySportBetHistory);
 SportRouter.post('/get-lucky-sport-bet-history-user', GetLuckySportBetHistoryUser);
+SportRouter.get('/lucky-sport/merchant-quota', GetLuckySportMerchantQuota);
 
 module.exports = SportRouter;

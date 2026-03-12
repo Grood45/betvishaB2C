@@ -1,7 +1,7 @@
 const express = require("express");
 const server = express();
 require("dotenv").config();
-const cron =require("node-cron")
+const cron = require("node-cron")
 const cors = require("cors");
 const { connection } = require("./config/db");
 const { AdminRouter } = require("./routes/admin.route");
@@ -31,11 +31,12 @@ const { OtpServiceRouter } = require("./routes/otpservice.route");
 const { IpServiceRouter } = require("./routes/ipservice.routes");
 const SportRouter = require("./routes/sport.route");
 const ReferralRouter = require("./routes/referral.route");
-const {ProcessReferralBonus, CalculateOtherBonuses} = require("./utils/Promotion/ProcessReferralBonus");
+const { ProcessReferralBonus, CalculateOtherBonuses } = require("./utils/Promotion/ProcessReferralBonus");
 const GameStructure = require("./models/gamestructure.model");
 const { GetPromotion } = require("./utils/Promotion/GetPromotion");
 const { AffiliateRouter } = require("./routes/affiliate.route");
 const { SportCallbackRouter } = require("./routes/psport.route");
+const LuckySportWebhookRouter = require("./routes/luckysport_webhook.route");
 server.set("trust proxy", true);
 server.use(express.json());
 // Middleware for cors
@@ -73,6 +74,7 @@ server.use("/api/affiliate", AddModelQueryMiddleware, AffiliateRouter);
 server.use("/", CasinoRouter);
 server.use("/api/sport", SportRouter);
 server.use("/api/powerplay-sport", SportCallbackRouter)
+server.use("/api/webhook/luckysport", LuckySportWebhookRouter);
 server.use("/api/referral", ReferralRouter);
 // server.use("/register-agent",handleAgentCurrency)
 server.get("/api/home", async (req, res) => {
@@ -144,7 +146,7 @@ cron.schedule('*/10 * * * *', async () => {
 //   const data=await BonusHistory.find({timestamp:{$gt:"2024-08-28T22:09"}})
 
 //   console.log("Bonus Data", data);
- 
+
 // }catch(e){
 //   console.log("Error", e);
 // }
@@ -201,10 +203,11 @@ const removeDuplicates = async () => {
 
 // removeDuplicates().then((res)=>console.log(res))
 
-const getdata=async()=>{
+const getdata = async () => {
   const promotionData = await GetPromotion({
     category: "referral_bonus",
-    sub_category: "every_referral"},
+    sub_category: "every_referral"
+  },
   );
   console.log(promotionData, "promotionData")
 }

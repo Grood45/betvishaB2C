@@ -3,7 +3,7 @@ const { SportSetupModel } = require("../../models/providers/sportsetup.model");
 // Upsert (Create or Update) sports provider setup
 const upsertSportSetup = async (req, res) => {
     try {
-        const { provider_name, cert_key, agent_code, status, callback_url, provider_image, provider_logo, sport_images, is_maintenance, is_coming_soon, maintenance_display_type, coming_soon_display_type } = req.body;
+        const { provider_name, cert_key, agent_code, merchant_code, jwt_secret, status, callback_url, provider_image, provider_logo, sport_images, is_maintenance, is_coming_soon, maintenance_display_type, coming_soon_display_type } = req.body;
 
         if (!provider_name) {
             return res.status(400).json({ status: 400, success: false, message: "Provider name is required" });
@@ -16,6 +16,8 @@ const upsertSportSetup = async (req, res) => {
             // Update
             if (cert_key !== undefined) setup.cert_key = cert_key;
             if (agent_code !== undefined) setup.agent_code = agent_code;
+            if (merchant_code !== undefined) setup.merchant_code = merchant_code;
+            if (jwt_secret !== undefined) setup.jwt_secret = jwt_secret;
             if (status !== undefined) setup.status = status;
             setup.callback_url = callback_url || ""; // Always update or set to empty if not provided
             if (provider_image !== undefined) setup.provider_image = provider_image;
@@ -34,6 +36,8 @@ const upsertSportSetup = async (req, res) => {
                 provider_name,
                 cert_key: cert_key || "",
                 agent_code: agent_code || "",
+                merchant_code: merchant_code || "",
+                jwt_secret: jwt_secret || "",
                 status: status || false,
                 callback_url: callback_url || "",
                 provider_image: provider_image || "",

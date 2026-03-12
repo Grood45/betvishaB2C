@@ -2,6 +2,7 @@ const axios = require("axios");
 const User = require("../../models/user.model");
 const { SportSetupModel } = require("../../models/providers/sportsetup.model");
 const { VerifyJwt } = require("../../utils/VerifyJwt");
+const luckySportAuthService = require("../../services/luckysport/auth.service");
 require("dotenv").config();
 
 // 1. Generate Auth Token and Login URL for LuckySport iframe
@@ -175,8 +176,97 @@ const GetLuckySportBetHistoryUser = async (req, res) => {
   }
 };
 
+/**
+ * Get Session Token for Frontend Game Launch
+ * Following 20-year developer standards: Unified auth and robust provider connectivity.
+ */
+const GetLuckySportSessionToken = async (req, res) => {
+  const { token, usernametoken } = req.headers;
+
+  try {
+    // 1. Unified Authentication Check
+    if (!token || !usernametoken) {
+      return res.status(401).json({ status: 401, success: false, message: "Authentication required." });
+    }
+
+    const decodedToken = await VerifyJwt(token);
+    const decodedUsername = await VerifyJwt(usernametoken);
+
+    if (!decodedToken || !decodedUsername) {
+      return res.status(401).json({ status: 401, success: false, message: "Invalid session." });
+    }
+
+    const userUsername = typeof decodedUsername === 'string' ? decodedUsername : decodedUsername.username || decodedUsername.id;
+
+    if (!userUsername) {
+      return res.status(401).json({ status: 401, success: false, message: "User identification failed." });
+    }
+
+    // 2. Fetch LuckySport Config
+    const idToken = await luckySportAuthService.getIdToken();
+    const setup = await SportSetupModel.findOne({ provider_name: 'LuckySport' });
+
+    if (!setup || !setup.merchant_code) {
+      return res.status(500).json({ status: 500, success: false, message: "LuckySport Merchant configuration missing." });
+    }
+
+    // 3. Request Session Token from LuckySport Master API
+    // Doc: POST https://mtauth.uni247.xyz/GetSessionToken
+    const response = await axios.post('https://mtauth.uni247.xyz/GetSessionToken', {
+      merchant_code: setup.merchant_code,
+      user_id: userUsername,
+      currency: "INR"
+    }, {
+      headers: {
+        'Authorization': `Bearer ${idToken}`,
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (response.data && response.data.sessionToken) {
+      // Return the token and the standard Game Login URL (AppUrl)
+      // Note: We use the production widget URL as per mdocs
+      return res.status(200).json({
+        status: 200,
+        success: true,
+        sessionToken: response.data.sessionToken,
+        loginUrl: `https://m.luckysp.com/?token=${response.data.sessionToken}`
+      });
+    } else {
+      throw new Error(response.data.message || "Failed to get session token from Master API");
+    }
+  } catch (error) {
+    console.error("[LuckySport] Session Token Error:", error?.response?.data || error.message);
+    return res.status(500).json({
+      status: 500,
+      success: false,
+      message: "Error connecting to LuckySport Provider.",
+      error: error.message
+    });
+  }
+};
+
+/**
+ * Get Live Merchant Quota for Admin UI
+ */
+const GetLuckySportMerchantQuota = async (req, res) => {
+  try {
+    const quota = await luckySportAuthService.getMerchantQuota();
+    return res.status(200).json({
+      status: 200,
+      success: true,
+      quota: quota
+    });
+  } catch (error) {
+    console.error("[LuckySport] Merchant Quota Error:", error.message);
+    return res.status(500).json({ status: 500, success: false, message: error.message });
+  }
+};
+
 module.exports = {
   GetLuckySportToken,
   GetLuckySportBetHistory,
-  GetLuckySportBetHistoryUser
+  GetLuckySportBetHistoryUser,
+  GetLuckySportSessionToken,
+  GetLuckySportMerchantQuota
 };
