@@ -185,6 +185,13 @@ function MobileSidebar() {
           icon1: <MdOutlineSportsCricket fontSize={"20px"} />,
           route: "/powersport",
           name: "providerView",
+        },
+        {
+          id: 1044,
+          title: "LuckySport",
+          icon1: <MdOutlineSportsCricket fontSize={"20px"} />,
+          route: "/luckysport",
+          name: "providerView",
         }
       ]
     },
@@ -295,6 +302,13 @@ function MobileSidebar() {
           title: "Sport Bet History",
           icon1: <BiMoneyWithdraw fontSize={"20px"} />,
           route: "/sport-bet-history",
+          name: "betHistoryView",
+        },
+        {
+          id: 204,
+          title: "LuckySport Bet History",
+          icon1: <BiMoneyWithdraw fontSize={"20px"} />,
+          route: "/luckysport-history",
           name: "betHistoryView",
         },
         {

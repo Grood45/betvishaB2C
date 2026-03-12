@@ -81,13 +81,13 @@ import { useTranslation } from 'react-i18next';
 function RightSidebar() {
   const { borderLang, bgGray, PrimaryText, whatsappiconBg, fbiconBg, SnapiconBg, bgColor1, telegramiconBg, instaiconBg, twittericonbg } = useSelector((state) => state.theme);
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const settings = useSelector((state) => state?.auth?.settings); 
+  const settings = useSelector((state) => state?.auth?.settings);
   const [gameCategory, setGameCategory] = useState([]);
-const [loading,setLoading]=useState(false)
-const toast = useToast()
+  const [loading, setLoading] = useState(false)
+  const toast = useToast()
   const btnRef = React.useRef();
-const {t} =useTranslation()
-const navigate=useNavigate()
+  const { t } = useTranslation()
+  const navigate = useNavigate()
   const Style = {
     common: {
       borderRadius: '100%',
@@ -118,13 +118,13 @@ const navigate=useNavigate()
   }
 
   const [isOpenSecond, setIsOpenSecond] = useState(false);
-const dispatch=useDispatch()
-  
+  const dispatch = useDispatch()
+
 
   const getCategoryList = async () => {
     setLoading(true);
-        try {
-            let response = await axios.get( `${import.meta.env.VITE_API_URL}/api/game-navigation/get-all-game-navigation?site_auth_key=${import.meta.env.VITE_API_SITE_AUTH_KEY}`);
+    try {
+      let response = await axios.get(`${import.meta.env.VITE_API_URL}/api/game-navigation/get-all-game-navigation?site_auth_key=${import.meta.env.VITE_API_SITE_AUTH_KEY}`);
 
       setGameCategory(response?.data?.data?.reverse())
       setLoading(false);
@@ -137,33 +137,33 @@ const dispatch=useDispatch()
       //   isClosable: true,
       //   position: "top",
       // });
-      
+
       setLoading(false);
     }
   };
 
- useEffect(() => {
-      getCategoryList();
-    }, []);
+  useEffect(() => {
+    getCategoryList();
+  }, []);
 
 
   const openModal = () => {
     onClose();
     setIsOpenSecond(true);
-      };
+  };
 
   const closeModal = () => {
     setIsOpenSecond(false);
   };
 
-  const getFetchGameByProvider=(item)=>{
+  const getFetchGameByProvider = (item) => {
     dispatch(getProviderGroupName(item?.name))
     dispatch(setSideBarOption(item?._id))
 
-   
+
   }
 
-  const handleSport=()=>{
+  const handleSport = () => {
     // setActive("1")
     dispatch(setSideBarOption("1"))
   }
@@ -190,33 +190,33 @@ const dispatch=useDispatch()
       >
         <DrawerOverlay />
         <DrawerContent>
-        <div className='flex justify-between px-4 pt-3  py-1 sticky top-0 z-20 bg-white  w-[100%] items-center'>
-                <img onClick={()=>navigate("/")} style={{ width: '110px' }} src={settings?.site_logo_mobile} alt="Logo" />
-                <RxCross2 onClick={onClose} fontSize={"20px"}/>
-              </div>
+          <div className='flex justify-between px-4 pt-3  py-1 sticky top-0 z-20 bg-white  w-[100%] items-center'>
+            <img onClick={() => navigate("/")} style={{ width: '110px' }} src={settings?.site_logo_mobile} alt="Logo" />
+            <RxCross2 onClick={onClose} fontSize={"20px"} />
+          </div>
           <Divider color={{ borderLang }} opacity={1} />
 
-          <DrawerBody style={{width:'100%',padding:'10px'}}  >
+          <DrawerBody style={{ width: '100%', padding: '10px' }}  >
 
             <VStack align="start" width={'100%'}>
-             
-              <Flex onClick={() => openModal()}    width="100%">
-                <InputGroup borderRadius="25px"  width={'100%'} backgroundColor={bgGray} height="40px">
-                  <Input  focusBorderColor="yellow.400"  outline="none"  placeholder="Search Games" width={'100%'}  borderRadius="25px" />
-                  <InputRightElement  pointerEvents="none">
+
+              <Flex onClick={() => openModal()} width="100%">
+                <InputGroup borderRadius="25px" width={'100%'} backgroundColor={bgGray} height="40px">
+                  <Input focusBorderColor="yellow.400" outline="none" placeholder="Search Games" width={'100%'} borderRadius="25px" />
+                  <InputRightElement pointerEvents="none">
                     <CiSearch fontSize="24px" color="#0000008a" />
                   </InputRightElement>
                 </InputGroup>
               </Flex>
-              <Box style={{marginLeft:"10px",marginTop:'10px'}}>
-              <ChangeLanguageMobile/>
+              <Box style={{ marginLeft: "10px", marginTop: '10px' }}>
+                <ChangeLanguageMobile />
 
               </Box>
 
               <Divider color={{ borderLang }} opacity={1} />
-              {links.slice(0,4).map((link, index) => (
+              {links.slice(0, 4).map((link, index) => (
                 <React.Fragment key={index}>
-                  <Flex align="center" style={{marginLeft:"10px"}} marginY="2" borderRadius="md" _hover={{ bg: "gray.100" }}>
+                  <Flex align="center" style={{ marginLeft: "10px" }} marginY="2" borderRadius="md" _hover={{ bg: "gray.100" }}>
                     {getIcon(link.label)}
                     <Link as={RouterLink} to={link.to} fontSize="14px" ml={4} fontWeight="bold">{t(link.label)}</Link>
                   </Flex>
@@ -227,96 +227,107 @@ const dispatch=useDispatch()
 
               <Divider color={{ borderLang }} opacity={1} />
               <React.Fragment >
-                  <Flex onClick={handleSport} align="center" style={{marginLeft:"10px"}} marginY="2" borderRadius="md" _hover={{ bg: "gray.100" }}>
-                  <div  className={`flex ` }>
-                            <img src={football} alt="" className="h-[25px] w-[25px]  " />
-                            </div>
+                <Flex onClick={handleSport} align="center" style={{ marginLeft: "10px" }} marginY="2" borderRadius="md" _hover={{ bg: "gray.100" }}>
+                  <div className={`flex `}>
+                    <img src={football} alt="" className="h-[25px] w-[25px]  " />
+                  </div>
 
-                    <Link as={RouterLink} to='' fontSize="14px" ml={4} fontWeight="bold">{t(`sports`)}</Link>
-                  </Flex>
+                  <Link as={RouterLink} to='' fontSize="14px" ml={4} fontWeight="bold">{t(`sports`)}</Link>
+                </Flex>
 
-                </React.Fragment>
-              {gameCategory?.map((item,index) => (
+              </React.Fragment>
+
+              <React.Fragment >
+                <Flex onClick={onClose} align="center" style={{ marginLeft: "10px" }} marginY="2" borderRadius="md" _hover={{ bg: "gray.100" }}>
+                  <div className={`flex `}>
+                    <img src={football} alt="" className="h-[25px] w-[25px]  " />
+                  </div>
+
+                  <Link as={RouterLink} to='/lucky-sport' fontSize="14px" ml={4} fontWeight="bold">LuckySport</Link>
+                </Flex>
+
+              </React.Fragment>
+              {gameCategory?.map((item, index) => (
                 <React.Fragment key={item?._id}>
-                  <Flex 
-                   onClick={()=>
-                    getFetchGameByProvider(item)
+                  <Flex
+                    onClick={() =>
+                      getFetchGameByProvider(item)
 
                     }
-                  align="center" style={{marginLeft:"10px"}} marginY="2" borderRadius="md" _hover={{ bg: "gray.100" }}>
-                  <div  className={`flex   rounded-[8px]  ` }>
-                            <img src={item?.icon} alt="" className="h-[25px] w-[25px]  " />
-                             </div>
+                    align="center" style={{ marginLeft: "10px" }} marginY="2" borderRadius="md" _hover={{ bg: "gray.100" }}>
+                    <div className={`flex   rounded-[8px]  `}>
+                      <img src={item?.icon} alt="" className="h-[25px] w-[25px]  " />
+                    </div>
 
                     <Link as={RouterLink} to='' fontSize="14px" ml={4} fontWeight="bold">{t(item?.name)}</Link>
                   </Flex>
 
                 </React.Fragment>
-                    
-      ))}
 
-<Divider color={{ borderLang }} opacity={1} />
+              ))}
+
+              <Divider color={{ borderLang }} opacity={1} />
 
 
-{links.slice(17,40).map((link, index) => (
+              {links.slice(17, 40).map((link, index) => (
                 <React.Fragment key={index}>
-                  <Flex align="center" style={{marginLeft:"10px"}} marginY="2" borderRadius="md" _hover={{ bg: "gray.100" }}>
+                  <Flex align="center" style={{ marginLeft: "10px" }} marginY="2" borderRadius="md" _hover={{ bg: "gray.100" }}>
                     {getIcon(link.label)}
                     <Link as={RouterLink} to={link.to} fontSize="14px" ml={4} fontWeight="bold">{t(link.label)}</Link>
                   </Flex>
 
                 </React.Fragment>
               ))}
-<Divider color={{ borderLang }} opacity={1} />
+              <Divider color={{ borderLang }} opacity={1} />
 
-                    <Flex justify="center" align="center" marginY="2" gap={3}>
-                      <Box display="flex" flexDirection="row" gap='2' flexWrap='wrap'>
-                        <Link href={settings?.facebook} target="_blank" style={{ ...Style.fb, ...Style.common }}
-                          width={{ base: '36px' }}
-                          height={{ base: '36px' }}>
-                          <FaFacebook size={22} />
-                        </Link>
-                        <Link href={settings?.twitter} target="_blank" style={{ ...Style.twitter, ...Style.common }}
-                          width={{ base: '36px' }}
-                          height={{ base: '36px' }}>
-                          <FaTwitter size={22} />
-                        </Link>
-                        <Link   href={settings?.instagram} target="_blank" style={{ ...Style.insta, ...Style.common }}
-                          width={{ base: '36px' }}
-                          height={{ base: '36px' }}>
-                          <FaInstagram size={22} />
-                        </Link>
-                        <Link  href={settings?.whatsapp} target="_blank" style={{ ...Style.whatsapp, ...Style.common, color: PrimaryText }}
-                          width={{ base: '36px' }}
-                          height={{ base: '36px' }}>
-                          <FaWhatsapp size={22} />
-                        </Link>
-                        <Link href={settings?.teligram} target="_blank" style={{ ...Style.telegram, ...Style.common, color: PrimaryText }}
-                          width={{ base: '36px' }}
-                          height={{ base: '36px' }}>
-                          <RiTelegramLine size={22} />
-                        </Link>
-                        {/* <Link href={settings?.twitter} target="_blank" style={{ ...Style.snap, ...Style.common, color: PrimaryText }}
+              <Flex justify="center" align="center" marginY="2" gap={3}>
+                <Box display="flex" flexDirection="row" gap='2' flexWrap='wrap'>
+                  <Link href={settings?.facebook} target="_blank" style={{ ...Style.fb, ...Style.common }}
+                    width={{ base: '36px' }}
+                    height={{ base: '36px' }}>
+                    <FaFacebook size={22} />
+                  </Link>
+                  <Link href={settings?.twitter} target="_blank" style={{ ...Style.twitter, ...Style.common }}
+                    width={{ base: '36px' }}
+                    height={{ base: '36px' }}>
+                    <FaTwitter size={22} />
+                  </Link>
+                  <Link href={settings?.instagram} target="_blank" style={{ ...Style.insta, ...Style.common }}
+                    width={{ base: '36px' }}
+                    height={{ base: '36px' }}>
+                    <FaInstagram size={22} />
+                  </Link>
+                  <Link href={settings?.whatsapp} target="_blank" style={{ ...Style.whatsapp, ...Style.common, color: PrimaryText }}
+                    width={{ base: '36px' }}
+                    height={{ base: '36px' }}>
+                    <FaWhatsapp size={22} />
+                  </Link>
+                  <Link href={settings?.teligram} target="_blank" style={{ ...Style.telegram, ...Style.common, color: PrimaryText }}
+                    width={{ base: '36px' }}
+                    height={{ base: '36px' }}>
+                    <RiTelegramLine size={22} />
+                  </Link>
+                  {/* <Link href={settings?.twitter} target="_blank" style={{ ...Style.snap, ...Style.common, color: PrimaryText }}
                           width={{ base: '36px'}}
                           height={{ base: '36px'}}>
                           <FaSnapchat size={22} />
                         </Link> */}
 
-                      </Box>
-                    </Flex>
-                  
+                </Box>
+              </Flex>
+
             </VStack>
 
           </DrawerBody>
         </DrawerContent>
       </Drawer>
       <SearchModal
-          isOpen={isOpenSecond}
-          onClose={closeModal}
-          providerData={"20"}
-          size="full"
-          
-        />
+        isOpen={isOpenSecond}
+        onClose={closeModal}
+        providerData={"20"}
+        size="full"
+
+      />
     </>
   );
 }
@@ -357,7 +368,7 @@ function getIcon(label) {
       return <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" width="28" height="28" x="0" y="0" viewBox="0 0 47 60" style={{ enableBackground: "new 0 0 512 512" }} xmlSpace="preserve"><g><g fill="#000" fillRule="nonzero"><path d="M36.718 21.345a7.2 7.2 0 0 1-.528-.546 18.92 18.92 0 0 1 1.5-3.6c.972-1.925 1.891-3.744 1.3-5.517a3 3 0 0 0-1.826-2.052 3.384 3.384 0 0 0-2.286.108 10.366 10.366 0 0 0-3.129-6.446c-3.434-3.431-6.177-2.64-7.634-1.726A8.7 8.7 0 0 0 19.04 0a6.468 6.468 0 0 0-6.731 5.123 10.513 10.513 0 0 0-6.971 3.438 5.686 5.686 0 0 0-1.285 4.6 7.445 7.445 0 0 0 1.968 4.21 8.224 8.224 0 0 0-4.692 2.911 6.872 6.872 0 0 0-1.275 4.881.963.963 0 0 0 1.625.6.685.685 0 0 1 .071-.031A7.15 7.15 0 0 0 5.8 27.97c1.45.37 2.918.66 4.4.866a13.715 13.715 0 0 1-2.709 2.332C.462 35.85 0 40.114.973 42.984a8 8 0 0 0 .118 5.332A5.7 5.7 0 0 0 5.9 52.4c.33.043.66.065.993.064 1.375-.027 2.73-.33 3.986-.891a11.32 11.32 0 0 1-.485 4.218 1.5 1.5 0 0 0 1.914 1.841l4.01-1.337a3 3 0 0 1-.5 1.364 1.484 1.484 0 0 0-.013 1.569c.296.492.846.773 1.418.724a16.43 16.43 0 0 0 8.259-3.19c.02.6-.088 1.198-.316 1.753a1 1 0 0 0 1.236 1.412 16.431 16.431 0 0 0 7.083-4.484 13.947 13.947 0 0 1-.182 2.11c-.1.617.2 1.23.746 1.534a1.5 1.5 0 0 0 1.717-.163 17.938 17.938 0 0 0 5.734-9.279l.055.147c.224.62.832 1.017 1.49.974a1.5 1.5 0 0 0 1.373-1.143A45.425 45.425 0 0 0 46.04 39c0-7.525-5.07-13.755-9.322-17.655zM6.894 9.818a8.707 8.707 0 0 1 6.283-2.769 9.562 9.562 0 0 1 6.2 1.829 1 1 0 1 0 1.2-1.6 11.411 11.411 0 0 0-6.158-2.211A4.435 4.435 0 0 1 19.04 2a6.76 6.76 0 0 1 4.423 1.581 9.368 9.368 0 0 1 2.629 3.737 1.001 1.001 0 1 0 1.9-.634A11.432 11.432 0 0 0 25.73 2.99c1.368-.537 2.909.024 4.6 1.717a8.287 8.287 0 0 1 2.579 6.586 9.79 9.79 0 0 1-.19 1.433 1 1 0 0 0 .976 1.204 1 1 0 0 0 .978-.8 11.9 11.9 0 0 0 .177-1.177 2.372 2.372 0 0 1 1.65-.433c.241.084.439.352.588.8.328.982-.374 2.372-1.186 3.981-.395.782-.812 1.632-1.167 2.531l-.006-.008A21.436 21.436 0 0 0 29.64 13.2c-5.561-4.171-9.975-1.743-12.9-.136-.645.383-1.32.713-2.018.987a30.959 30.959 0 0 0-3.888 1.735c-.832.417-1.608.8-2.129.992-1.431-.545-2.338-1.863-2.682-3.943a3.687 3.687 0 0 1 .871-3.017zm11.4 17.564a12.252 12.252 0 0 0-6.394-8.061 5.09 5.09 0 0 0-1.145-1.261c.313-.152.637-.313.983-.486a30.439 30.439 0 0 1 3.537-1.593c6.479-.79 10.946.72 11.953 4.043.776 2.565-.819 5.675-3.631 7.081a21.888 21.888 0 0 0-4.774 2.949 18.851 18.851 0 0 0-.532-2.672zM8.083 19c.452.032 2.584.373 2.914 4a54.96 54.96 0 0 0-8.783.584.9.9 0 0 0-.154.018c.112-.77.411-1.5.872-2.126.989-1.323 2.722-2.156 5.151-2.476zm-3.747 6.3c1.835-.167 4.33-.27 6.7-.294v1.92a35.522 35.522 0 0 1-4.756-.895 8.012 8.012 0 0 1-1.944-.731zm1.828 25.118a3.7 3.7 0 0 1-3.175-2.733 5.962 5.962 0 0 1-.071-4.229 4.846 4.846 0 0 1 2.494-2.526 1 1 0 0 0-.744-1.858A6.554 6.554 0 0 0 2.6 40.45c.129-2.489 2.129-5.042 5.993-7.618a12.933 12.933 0 0 0 4.34-4.385c.047-.146.083-.295.107-.447v-4a12 12 0 0 0-.117-1.639 10.806 10.806 0 0 1 3.441 5.56c1.873 6.7-.678 15.8-3.156 19.524a8.4 8.4 0 0 1-7.044 2.972zM42.843 47.6l-.106-.26a1.5 1.5 0 0 0-2.866.325 16.37 16.37 0 0 1-4.431 8.846c.08-.867.054-1.74-.079-2.6a1.5 1.5 0 0 0-2.691-.617 13.227 13.227 0 0 1-5.2 4.073 5.45 5.45 0 0 0-.2-1.933 1.5 1.5 0 0 0-2.395-.73 14.69 14.69 0 0 1-6.91 3.156 4.012 4.012 0 0 0 .231-2.6 1.509 1.509 0 0 0-1.93-1.06l-3.714 1.238a11.6 11.6 0 0 0 .193-4.875 7.751 7.751 0 0 0 2.128-2.013c2.11-3.175 4.192-9.587 4.13-15.724.827-1.159 1.788-2.088 5.484-3.935 3.72-1.86 5.719-5.923 4.651-9.451-.415-1.369-2.255-5.254-9.495-5.631 2.446-1.132 5.241-1.681 8.8.987a19.467 19.467 0 0 1 4.64 5.146c.388.57.767 1.12 1.171 1.638l.014.016c.334.434.701.841 1.1 1.217C39.322 26.447 44.04 32.2 44.04 39a38.117 38.117 0 0 1-1.197 8.6z"></path><path d="M20.04 17a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 4a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"></path></g></g></svg>;
     case 'Racing':
       return <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" width="28" height="28" x="0" y="0" viewBox="0 0 846.66 846.66" style={{ enableBackground: "new 0 0 512 512" }} xmlSpace="preserve" fillRule="evenodd" className=""><g transform="matrix(-1,0,0,1,846.656307220459,0)"><path fillRule="nonzero" d="M461.43 794.35c-50.82-115.8-52.26-134.44-48.6-279.82-39.12-9.8-76.83-40.65-91.91-71.64-11.65-23.92 24.69-41.6 36.33-17.69 31.56 64.83 133.17 68.68 185.77 35.99 6.49-4.03 14.38-3.94 20.6-.43 29.68 15.91 81.66 50.89 103.85 58.96 15.33 5.58 27.88 2.87 35.91-19.23 3.64-10.05 14.45-15.43 24.57-12.49 78.4 21.37 44.2-74.97 31.96-82.84-101.28-65.14-215.44-163.47-306.03-214.82-29.08-16.49 20.59-55.17-42.46-95.7-6.06 18.5-7.6 33.41-3.18 53.85 2.45 11.33-4.85 22.29-17.04 24.29-146.98 28.29-156.66 101.7-184.79 232.99-35.7 166.64 2.33 223.78-116.14 375.25zm267.5-377.24c22.25 14.56.13 48.37-22.12 33.81l-10.02-6.56c-22.26-14.57-.13-48.37 22.11-33.81zM548.59 306.24c15.95 21.13-16.29 45.45-32.23 24.32-14.53-19.28-35.94-19.92-50.95-1.48-16.69 20.51-47.96-4.94-31.28-25.44 31.7-38.95 84.4-37.29 114.46 2.6zm-62.91-161.1L617.41 16.62c15.07-14.68 40.74.89 32.7 22.14L582.68 233.8c69.64 58.01 125.16 89.86 199.03 137.4 47.65 30.65 61.54 174.34-47.4 159.11-39.93 76.77-122.42 2.67-179.89-28.79-46.79 27.89-56.9 22.66-101.41 18.11-3.57 143.88-1.1 154.31 57.75 286.76 7.22 15.02-4.16 29.91-18.62 29.39L48.67 819.87c-16.17-.6-25.58-19.9-14.85-32.94 141.05-171.22 92.8-201.47 133.1-389.53 30.36-141.7 48.54-225.95 198.8-260.47-2.06-25.98 5.24-55.53 17.21-80.27 4.97-9.94 17.06-13.97 27.01-9 50.42 25.21 74.92 54.5 75.74 97.48zm63.73 61.63 35.21-101.82-74.66 72.84c13.79 9.36 26.81 19.06 39.45 28.98z" fill="#000000" opacity="1" data-original="#000000"></path></g></svg>;
-    
+
     case 'Contact Us':
       return <FiPhoneCall fontSize="lg" color="black" marginRight="4" size={28} />;
     case 'Blog':

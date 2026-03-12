@@ -12,8 +12,8 @@ module.exports = {
         NODE_ENV: "production",
         MONGO_URL:
           "mongodb+srv://Suvam:OPflNTmGUcB6wPyA@cluster0.p4stx.mongodb.net/project_01?retryWrites=true&w=majority",
-        PORT: 8099,
-        SERVER_ID:"YY-TEST1213",
+        PORT: 8098,
+        SERVER_ID: "YY-TEST1213",
         SALT: 3,
         SECRET_KEY: "bajilive",
         COMPANY_KEY: "D4F3BADBE0CF4BF78BC69EB60AF22D6D",
@@ -25,8 +25,8 @@ module.exports = {
         NODE_ENV: "production",
         MONGO_URL:
           "mongodb+srv://Suvam:OPflNTmGUcB6wPyA@cluster0.p4stx.mongodb.net/project_01?retryWrites=true&w=majority",
-        PORT: 8099,
-        SERVER_ID:"YY-TEST1213",
+        PORT: 8098,
+        SERVER_ID: "YY-TEST1213",
         SALT: 3,
         SECRET_KEY: "bajilive",
         COMPANY_KEY: "D4F3BADBE0CF4BF78BC69EB60AF22D6D",

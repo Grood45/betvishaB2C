@@ -68,6 +68,7 @@ const routes =
     { path: '/deleted-user-manage', component: DeletedUserManage, permission: 'userView' },
     { path: '/my-profile', component: MyProfile },
     { path: '/9wicket', component: NineWicketManage, permission: 'providerView' },
+    { path: '/luckysport', component: LuckySportManage, permission: 'providerView' },
     { path: '/powersport', component: PowerPlayManage, permission: 'providerView' },
     { path: '/sportmanage', component: SportManage, permission: 'sportView' },
     { path: '/adminmanage', component: AdminManage, permission: 'adminView' },
@@ -86,6 +87,7 @@ const routes =
     { path: '/admin-transaction', component: AdminTransaction, permission: "adminTransactionView" },
     { path: '/bet-history', component: BetReport, permission: 'betHistoryView' },
     { path: '/sport-bet-history', component: SportBetHistory, permission: 'betHistoryView' },
+    { path: '/luckysport-history', component: LuckySportHistory, permission: 'betHistoryView' },
 
 
     { path: '/affilate-admin-manage', component: AffilateAdminManage, permission: 'betHistoryView' },
@@ -140,12 +142,14 @@ import AddDataProvider from '../Modals/AddDataProvider';
 import EditDataProvider from '../Modals/EditDataProvider';
 import DataProvider from '../Modals/DataProvider';
 import SportBetHistory from '../pages/SportBetHistory';
+import LuckySportHistory from '../pages/LuckySportHistory';
 import AffilateAdminManage from '../pages/AffilateAdminManage';
 import AffilateTransaction from '../pages/AffilateTransaction';
 import CreateAffilate from '../pages/CreateAffilate';
 import SingleAffilateManage from '../pages/SingleAffilateManage';
 import NineWicketManage from '../pages/NineWicketManage';
 import PowerPlayManage from '../pages/PowerPlayManage';
+import LuckySportManage from '../pages/LuckySportManage';
 const AllRoute = () => {
   return (
     <Routes>

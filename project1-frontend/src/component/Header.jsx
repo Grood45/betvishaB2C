@@ -25,28 +25,28 @@ import { getProviderGroupName } from '../redux/switch-web/action';
 import football from '../assets/football.png'
 function Header() {
   const { bgColor1, bgGray } = useSelector((state) => state.theme);
-  const settings = useSelector((state) => state?.auth?.settings); 
-const dispatch=useDispatch()
+  const settings = useSelector((state) => state?.auth?.settings);
+  const dispatch = useDispatch()
 
   const { t } = useTranslation();
   const isActive = (path) => {
     return location.pathname === path;
   };
 
-  const userData  = useSelector((state) => state?.auth);
-  const data=userData?.user?.data
+  const userData = useSelector((state) => state?.auth);
+  const data = userData?.user?.data
   const location = useLocation();
-const [loading,setLoading]=useState(false)
+  const [loading, setLoading] = useState(false)
 
   const [gameCategory, setGameCategory] = useState([]);
   const [error, setError] = useState(null);
-  const toast=useToast()
-console.log(settings?.site_logo,"settings2")
-  
+  const toast = useToast()
+  console.log(settings?.site_logo, "settings2")
+
   const getCategoryList = async () => {
     setLoading(true);
-        try {
-            let response = await axios.get( `${import.meta.env.VITE_API_URL}/api/game-navigation/get-all-game-navigation?site_auth_key=${import.meta.env.VITE_API_SITE_AUTH_KEY}`);
+    try {
+      let response = await axios.get(`${import.meta.env.VITE_API_URL}/api/game-navigation/get-all-game-navigation?site_auth_key=${import.meta.env.VITE_API_SITE_AUTH_KEY}`);
 
       setGameCategory(response?.data?.data?.reverse())
       setLoading(false);
@@ -59,12 +59,12 @@ console.log(settings?.site_logo,"settings2")
       //   isClosable: true,
       //   position: "top",
       // });
-      
+
       setLoading(false);
     }
   };
 
- 
+
 
   useEffect(() => {
     getCategoryList();
@@ -92,7 +92,7 @@ console.log(settings?.site_logo,"settings2")
           </Box>
           <Link to="/" className="">
             <Image
-            className='ml-3 w-[140px] lg:w-[150px]'
+              className='ml-3 w-[140px] lg:w-[150px]'
               src={settings?.site_logo}
               alt="Logo"
             />
@@ -110,66 +110,71 @@ console.log(settings?.site_logo,"settings2")
           </Box>
         </div>
         <div
-    className="sub_Header justify-between overflow-auto whitespace-nowrap hidden xl:flex"
-    style={{
-      backgroundColor: bgGray,
-      gap: '8px',
-      msOverflowStyle: 'none',
-      scrollbarWidth: 'none',
-      height: '50px',
-    }}
-  >
-    <div className="flex items-center gap-4 overflow-scroll">
-      <NavLink
-        className={`text-base font-bold w-[100%] text-uppercase p-3 inline-block ${
-          isActive('/') ? 'active-menu' : ''
-        }`}
-        to="/"
-      >
-        <RiHome4Line size={28} />
-      </NavLink>
-
-      <NavLink
-        className={` font-bold text-uppercase  w-[100%] pr-8  text-[15px]  flex gap-1  items-center p-3  ${
-          isActive('/Sports') ? 'active-menu' : ''
-        }`}
-        to="/Sports"
-      >
-       <img src={football} alt="" className="h-[22px] w-[22px] " />
-        {t('sports')}
-      </NavLink>
-
-     
-      {gameCategory?.map((item) => (
-        <NavLink
-          key={item?._id}
-          className={`text-base font-bold text-uppercase  w-[100%] flex text-[15px] pr-8  gap-1 items-center  p-3 ${
-            isActive(item?.link) ? 'active-menu' : ''
-          }`}
-          to={{
-            pathname: item?.link,
-            
-          }}
-          onClick={()=>{
-               dispatch(getProviderGroupName(item?.name))
+          className="sub_Header justify-between overflow-auto whitespace-nowrap hidden xl:flex"
+          style={{
+            backgroundColor: bgGray,
+            gap: '8px',
+            msOverflowStyle: 'none',
+            scrollbarWidth: 'none',
+            height: '50px',
           }}
         >
-          <img src={item?.icon} alt="" className="h-[22px] w-[22px] " />
-          {t(item?.name)}
-        </NavLink>
-      ))}
+          <div className="flex items-center gap-4 overflow-scroll">
+            <NavLink
+              className={`text-base font-bold w-[100%] text-uppercase p-3 inline-block ${isActive('/') ? 'active-menu' : ''
+                }`}
+              to="/"
+            >
+              <RiHome4Line size={28} />
+            </NavLink>
 
-      <NavLink
-        className={`text-[15px] flex items-center gap-1 font-bold text-uppercase p-3  ${
-          isActive('/Promotion') ? 'active-menu' : ''
-        }`}
-        to="/Promotion"
-      >
-        <IoGiftOutline size={26} />
-        {t('promotion')}
-      </NavLink>
+            <NavLink
+              className={` font-bold text-uppercase  w-[100%] pr-8  text-[15px]  flex gap-1  items-center p-3  ${isActive('/Sports') ? 'active-menu' : ''
+                }`}
+              to="/Sports"
+            >
+              <img src={football} alt="" className="h-[22px] w-[22px] " />
+              {t('sports')}
+            </NavLink>
 
-      {/* <NavLink
+            <NavLink
+              className={` font-bold text-uppercase  w-[100%] pr-8  text-[15px]  flex gap-1  items-center p-3  ${isActive('/lucky-sport') ? 'active-menu' : ''
+                }`}
+              to="/lucky-sport"
+            >
+              <img src={football} alt="" className="h-[22px] w-[22px] " />
+              LuckySport
+            </NavLink>
+
+
+            {gameCategory?.map((item) => (
+              <NavLink
+                key={item?._id}
+                className={`text-base font-bold text-uppercase  w-[100%] flex text-[15px] pr-8  gap-1 items-center  p-3 ${isActive(item?.link) ? 'active-menu' : ''
+                  }`}
+                to={{
+                  pathname: item?.link,
+
+                }}
+                onClick={() => {
+                  dispatch(getProviderGroupName(item?.name))
+                }}
+              >
+                <img src={item?.icon} alt="" className="h-[22px] w-[22px] " />
+                {t(item?.name)}
+              </NavLink>
+            ))}
+
+            <NavLink
+              className={`text-[15px] flex items-center gap-1 font-bold text-uppercase p-3  ${isActive('/Promotion') ? 'active-menu' : ''
+                }`}
+              to="/Promotion"
+            >
+              <IoGiftOutline size={26} />
+              {t('promotion')}
+            </NavLink>
+
+            {/* <NavLink
         className={`text-[15px] font-bold text-uppercase flex items-center p-3 gap-1 ${
           isActive('/VIP') ? 'active-menu' : ''
         }`}
@@ -178,8 +183,8 @@ console.log(settings?.site_logo,"settings2")
         <LiaCrownSolid size={26} />
         {t('vip')}
       </NavLink> */}
-    </div>
-  </div>
+          </div>
+        </div>
       </div>
     </>
   );
